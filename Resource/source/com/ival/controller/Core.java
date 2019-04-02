@@ -29,6 +29,14 @@ public class Core extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
 		switch (action) {
+		case "testconection":
+			try {
+				test(request,response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
 		//CRUD producto
 		case "addProducto":
 			break;
@@ -59,7 +67,12 @@ public class Core extends HttpServlet {
 		};
 		
 	}
-	
+	private void test(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		request.setAttribute("servletResponse", "hello from servlet");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/test.jsp");
+		dispatcher.forward(request, response);
+	}
 	private void index(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		
@@ -76,68 +89,68 @@ public class Core extends HttpServlet {
 
 	
 	//Hibernate Stuff
-	public Core() {
-		ivalDAO = new IvalDAO();
-	}
-	//Producto
-	private void persistProducto(Producto entity) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		ivalDAO.persist(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private void updateProducto(Producto entity) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		ivalDAO.update(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private Producto findProductoById(String id) {
-		ivalDAO.openCurrentSession();
-		Producto entity = ivalDAO.findProductoById(id);
-		ivalDAO.closeCurrentSession();
-		return entity;
-	}
-	private void deleteProducto(String id) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		Producto entity = ivalDAO.findProductoById(id);
-		ivalDAO.delete(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private List<Producto> findAllProductos() {
-		ivalDAO.openCurrentSession();
-		List<Producto> entities = ivalDAO.findAllProductos();
-		ivalDAO.closeCurrentSession();
-		return entities;
-	}
-	
-	//Carrito
-	private void persistCarrito(Carrito entity) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		ivalDAO.persist(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private void updateCarrito(Carrito entity) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		ivalDAO.update(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private Carrito findCarritoById(String id) {
-		ivalDAO.openCurrentSession();
-		Carrito entity = ivalDAO.findCarritoById(id);
-		ivalDAO.closeCurrentSession();
-		return entity;
-	}
-	private void deleteCarrito(String id) {
-		ivalDAO.openCurrentSessionwithTransaction();
-		Carrito entity = ivalDAO.findCarritoById(id);
-		ivalDAO.delete(entity);
-		ivalDAO.closeCurrentSessionwithTransaction();
-	}
-	private List<Carrito> findAllCarritos() {
-		ivalDAO.openCurrentSession();
-		List<Carrito> entities = ivalDAO.findAllCarritos();
-		ivalDAO.closeCurrentSession();
-		return entities;
-	}
+//	public Core() {
+//		ivalDAO = new IvalDAO();
+//	}
+//	//Producto
+//	private void persistProducto(Producto entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.persist(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private void updateProducto(Producto entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.update(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private Producto findProductoById(String id) {
+//		ivalDAO.openCurrentSession();
+//		Producto entity = ivalDAO.findProductoById(id);
+//		ivalDAO.closeCurrentSession();
+//		return entity;
+//	}
+//	private void deleteProducto(String id) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		Producto entity = ivalDAO.findProductoById(id);
+//		ivalDAO.delete(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private List<Producto> findAllProductos() {
+//		ivalDAO.openCurrentSession();
+//		List<Producto> entities = ivalDAO.findAllProductos();
+//		ivalDAO.closeCurrentSession();
+//		return entities;
+//	}
+//	
+//	//Carrito
+//	private void persistCarrito(Carrito entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.persist(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private void updateCarrito(Carrito entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.update(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private Carrito findCarritoById(String id) {
+//		ivalDAO.openCurrentSession();
+//		Carrito entity = ivalDAO.findCarritoById(id);
+//		ivalDAO.closeCurrentSession();
+//		return entity;
+//	}
+//	private void deleteCarrito(String id) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		Carrito entity = ivalDAO.findCarritoById(id);
+//		ivalDAO.delete(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private List<Carrito> findAllCarritos() {
+//		ivalDAO.openCurrentSession();
+//		List<Carrito> entities = ivalDAO.findAllCarritos();
+//		ivalDAO.closeCurrentSession();
+//		return entities;
+//	}
 	
 //	//Contiene
 //	private void persistContiene(Contiene entity) {
