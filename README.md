@@ -12,6 +12,7 @@ IvAl is our brand new Marketplace test projec. We are usign the following techno
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relational Schema, as following:
 <img src="Files/ERDiagram.png">
 And it generated from the Relational Schema, this SQL Query (which we edited):
+
 ```SQL
 CREATE TABLE Producto
 (
@@ -40,4 +41,5 @@ CREATE TABLE Contiene
   FOREIGN KEY (CodCar) REFERENCES Carrito(CodCar)
 );
 ```
+
 
