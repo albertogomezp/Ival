@@ -32,7 +32,7 @@ function callJqueryAjax(action){
 	  //var action = $('#name').val();
 	  $.ajax(
 	    {
-	      url     : '/ival/Core',
+	      url     : '/IvAl/Core',
 	      method     : 'POST',
 	      data     : {action: action},
 	      success    : function(resultText){ $('#resultServlet').html(resultText); },
@@ -42,22 +42,4 @@ function callJqueryAjax(action){
 	    }
 	    );
 	  };
-  function moveUserData(action){
-	  console.log("init script");
-	  //var action = $('#name').val();
-	  var user = document.getElementById("Username").value;
-	  var password = document.getElementById("password").value;
-	  console.log(user);
-	  console.log(password);
-	  $.ajax(
-	    {
-	      url     : '/ival/Core',
-	      method     : 'POST',
-	      data     : {action: action,"user":user,"password":password},
-	      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("success"); },
-	      error : function(jqXHR, exception){
-	        console.log('Error occured!!');
-	      }
-	    }
-	    );
-	  };
+
