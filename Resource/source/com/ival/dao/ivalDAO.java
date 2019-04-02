@@ -14,7 +14,7 @@ import org.hibernate.cfg.Configuration;
  * @author: Ivan Perez
  */
 
-public class ivalDAO {
+public class ivalDAO implements InterfaceDAO {
 	
 	private Session currentSession;
 	private Transaction currentTransaction;
@@ -22,21 +22,37 @@ public class ivalDAO {
 	public ivalDAO() {
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#openCurrentSession()
+	 */
+	@Override
 	public Session openCurrentSession() {
 		currentSession = getSessionFactory().openSession();
 		return currentSession;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#openCurrentSessionwithTransaction()
+	 */
+	@Override
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = getSessionFactory().openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#closeCurrentSession()
+	 */
+	@Override
 	public void closeCurrentSession() {
 		currentSession.close();
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#closeCurrentSessionwithTransaction()
+	 */
+	@Override
 	public void closeCurrentSessionwithTransaction() {
 		currentTransaction.commit();
 		currentSession.close();
@@ -55,57 +71,113 @@ public class ivalDAO {
  		return sessionFactory;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#getCurrentSession()
+	 */
+	@Override
 	public Session getCurrentSession() {
 		return currentSession;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#setCurrentSession(org.hibernate.Session)
+	 */
+	@Override
 	public void setCurrentSession(Session currentSession) {
 		this.currentSession = currentSession;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#getCurrentTransaction()
+	 */
+	@Override
 	public Transaction getCurrentTransaction() {
 		return currentTransaction;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#setCurrentTransaction(org.hibernate.Transaction)
+	 */
+	@Override
 	public void setCurrentTransaction(Transaction currentTransaction) {
 		this.currentTransaction = currentTransaction;
 	} 
 	//--> Producto functions:
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#persist(com.ival.model.Producto)
+	 */
+	@Override
 	public void persist(Producto entity) {
 		getCurrentSession().save(entity);
 	}
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#update(com.ival.model.Producto)
+	 */
+	@Override
 	public void update(Producto entity) {
 		getCurrentSession().update(entity);
 	}
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#findProductoById(java.lang.String)
+	 */
+	@Override
 	public Producto findProductoById(String id) {
 		Producto entity = (Producto) getCurrentSession().get(Producto.class,(Integer.parseInt(id)));
 		return entity;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#delete(com.ival.model.Producto)
+	 */
+	@Override
 	public void delete(Producto entity) {
 		getCurrentSession().delete(entity);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#findAllProductos()
+	 */
+	@Override
 	public List<Producto> findAllProductos() {
 		 List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
 		return entity;
 	}
 	//--> Carrito functions:
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#persist(com.ival.model.Carrito)
+	 */
+	@Override
 	public void persist(Carrito entity) {
 		getCurrentSession().save(entity);
 	}
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#update(com.ival.model.Carrito)
+	 */
+	@Override
 	public void update(Carrito entity) {
 		getCurrentSession().update(entity);
 	}
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#findCarritoById(java.lang.String)
+	 */
+	@Override
 	public Carrito findCarritoById(String id) {
 		Carrito entity = (Carrito) getCurrentSession().get(Carrito.class,(Integer.parseInt(id)));
 		return entity;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#delete(com.ival.model.Carrito)
+	 */
+	@Override
 	public void delete(Carrito entity) {
 		getCurrentSession().delete(entity);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.ival.dao.InterfaceDAO#findAllCarritos()
+	 */
+	@Override
 	public List<Carrito> findAllCarritos() {
 		 List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
