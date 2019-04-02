@@ -14,12 +14,12 @@ import org.hibernate.cfg.Configuration;
  * @author: Ivan Perez
  */
 
-public class ivalDAO implements InterfaceDAO {
+public class IvalDAO implements InterfaceDAO {
 	
 	private Session currentSession;
 	private Transaction currentTransaction;
 
-	public ivalDAO() {
+	public IvalDAO() {
 	}
 
 	/* (non-Javadoc)
