@@ -45,4 +45,5 @@ CREATE TABLE Contiene
 <h1>Let's build!: Creating the Eclipse project</h1>
 Okay... things are getting serious. We have already create the project, imported some hibernate libs and created classes and config file.
 <h1> Control time: DAO, servlet, hibernate.... </h1>
-Hibernate is configured, DAO is created, corrected and given an interface. Servlet is created with some functions and prepared for the "action"s functions
+Hibernate is configured, DAO is created, corrected and given an interface. Servlet is created with some functions and prepared for the "action"s functions. Our project looks as follows:
+<img src="Files/projecttree.png">
