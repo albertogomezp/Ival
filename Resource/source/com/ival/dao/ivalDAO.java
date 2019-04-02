@@ -69,5 +69,25 @@ public class ivalDAO {
 	public void setCurrentTransaction(Transaction currentTransaction) {
 		this.currentTransaction = currentTransaction;
 	} 
-
+	//--> Producto functions:
+	public void persist(Producto entity) {
+		getCurrentSession().save(entity);
+	}
+	public void update(Producto entity) {
+		getCurrentSession().update(entity);
+	}
+	public Producto findById(String id) {
+		Producto entity = (Producto) getCurrentSession().get(Producto.class,(Integer.parseInt(id)));
+		return entity;
+	}
+	
+	public void delete(Producto entity) {
+		getCurrentSession().delete(entity);
+	}
+	
+	public List<Producto> findAll() {
+		 List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
+		return entity;
+	}
+	
 }
