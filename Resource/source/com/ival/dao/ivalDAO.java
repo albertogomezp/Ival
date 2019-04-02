@@ -10,8 +10,8 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 /*
- * @autor: Alberto Gömez Peña
- * @web: www.albertogomp.es
+ * @author: Alberto Gomez
+ * @author: Ivan Perez
  */
 
 public class ivalDAO {
@@ -47,6 +47,7 @@ public class ivalDAO {
 			 .configure()
 			 .addPackage("com.ival.model")
 			 .addAnnotatedClass(Carrito.class)
+//			 .addAnnotatedClass(Contiene.class)
 			 .addAnnotatedClass(Producto.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
@@ -109,5 +110,25 @@ public class ivalDAO {
 		 List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
 	}
+//	//--> Contiene functions:
+//	public void persist(Contiene entity) {
+//		getCurrentSession().save(entity);
+//	}
+//	public void update(Contiene entity) {
+//		getCurrentSession().update(entity);
+//	}
+//	public Contiene findContieneById(String id) {
+//		Contiene entity = (Contiene) getCurrentSession().get(Contiene.class,(Integer.parseInt(id)));
+//		return entity;
+//	}
+//	
+//	public void delete(Contiene entity) {
+//		getCurrentSession().delete(entity);
+//	}
+//	
+//	public List<Contiene> findAllContienes() {
+//		 List<Contiene> entity = (List<Contiene>) getCurrentSession().createQuery("from Contiene").list() ;
+//		return entity;
+//	}
 	
 }
