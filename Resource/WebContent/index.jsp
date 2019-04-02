@@ -19,7 +19,7 @@
 				 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="https://albertogomp.es" target="_blank">Alberto Gómez</a>
+				</button> <a class="navbar-brand" href="https://albertogomp.es" target="_blank">Ival testing area</a>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav">
 						<li class="nav-item active">

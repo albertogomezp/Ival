@@ -32,7 +32,7 @@ function callJqueryAjax(action){
 	  //var action = $('#name').val();
 	  $.ajax(
 	    {
-	      url     : '/Core',
+	      url     : '/ival/Core',
 	      method     : 'POST',
 	      data     : {action: action},
 	      success    : function(resultText){ $('#resultServlet').html(resultText); },
@@ -51,7 +51,7 @@ function callJqueryAjax(action){
 	  console.log(password);
 	  $.ajax(
 	    {
-	      url     : '/Core',
+	      url     : '/ival/Core',
 	      method     : 'POST',
 	      data     : {action: action,"user":user,"password":password},
 	      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("success"); },
