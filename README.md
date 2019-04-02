@@ -1,6 +1,6 @@
 # IvAl - Marketplace
 New project in collab with <a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> <br>
-IvAl is our brand new Marketplace test projec. We are usign the following technologies: <br>
+IvAl is our brand new Marketplace test project. We are usign the following technologies: <br>
 <ul>
     <li>MySQL</li>
     <li>Java Servlet</li>
