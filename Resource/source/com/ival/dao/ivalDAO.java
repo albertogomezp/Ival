@@ -76,7 +76,7 @@ public class ivalDAO {
 	public void update(Producto entity) {
 		getCurrentSession().update(entity);
 	}
-	public Producto findById(String id) {
+	public Producto findProductoById(String id) {
 		Producto entity = (Producto) getCurrentSession().get(Producto.class,(Integer.parseInt(id)));
 		return entity;
 	}
@@ -85,8 +85,28 @@ public class ivalDAO {
 		getCurrentSession().delete(entity);
 	}
 	
-	public List<Producto> findAll() {
+	public List<Producto> findAllProductos() {
 		 List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
+		return entity;
+	}
+	//--> Carrito functions:
+	public void persist(Carrito entity) {
+		getCurrentSession().save(entity);
+	}
+	public void update(Carrito entity) {
+		getCurrentSession().update(entity);
+	}
+	public Carrito findCarritoById(String id) {
+		Carrito entity = (Carrito) getCurrentSession().get(Carrito.class,(Integer.parseInt(id)));
+		return entity;
+	}
+	
+	public void delete(Carrito entity) {
+		getCurrentSession().delete(entity);
+	}
+	
+	public List<Carrito> findAllCarritos() {
+		 List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
 	}
 	
