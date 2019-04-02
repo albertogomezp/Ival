@@ -7,8 +7,8 @@ import javax.persistence.Table;
 
 
 /*
- * @author: Alberto G�mez Pe�a
- * @author: Iv�n P�rez Molina
+ * @author: Alberto Gomez 
+ * @author: Ivan Perez
  */
 
 @Entity
