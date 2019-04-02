@@ -43,5 +43,5 @@ CREATE TABLE Contiene
 ```
 
 <h1>Let's build!: Creating the Eclipse project</h1>
-
+Okay... things are getting serious (in fact, not) we have already create the project, imported some hibernate libs and created classes and config file.
 
