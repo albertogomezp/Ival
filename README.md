@@ -10,4 +10,5 @@ IvAl is our brand new Marketplace test projec. We are usign the following techno
 
 <h1>First thing first... Our Database:</h1>
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relationa Schema, as following:
+<img src="Files/ERDiagram.png">
 
