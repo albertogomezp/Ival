@@ -47,15 +47,15 @@ public class Core extends HttpServlet {
 			break;
 		case "getCarrito":
 			break;
-		//CRUD Contiene
-		case "addContiene":
-			break;
-		case "deleteContiene":
-			break;
-		case "updateContiene":
-			break;
-		case "getContiene":
-			break;
+//		//CRUD Contiene
+//		case "addContiene":
+//			break;
+//		case "deleteContiene":
+//			break;
+//		case "updateContiene":
+//			break;
+//		case "getContiene":
+//			break;
 		};
 		
 	}
@@ -108,6 +108,66 @@ public class Core extends HttpServlet {
 		ivalDAO.closeCurrentSession();
 		return entities;
 	}
+	
+	//Carrito
+	private void persistCarrito(Carrito entity) {
+		ivalDAO.openCurrentSessionwithTransaction();
+		ivalDAO.persist(entity);
+		ivalDAO.closeCurrentSessionwithTransaction();
+	}
+	private void updateCarrito(Carrito entity) {
+		ivalDAO.openCurrentSessionwithTransaction();
+		ivalDAO.update(entity);
+		ivalDAO.closeCurrentSessionwithTransaction();
+	}
+	private Carrito findCarritoById(String id) {
+		ivalDAO.openCurrentSession();
+		Carrito entity = ivalDAO.findCarritoById(id);
+		ivalDAO.closeCurrentSession();
+		return entity;
+	}
+	private void deleteCarrito(String id) {
+		ivalDAO.openCurrentSessionwithTransaction();
+		Carrito entity = ivalDAO.findCarritoById(id);
+		ivalDAO.delete(entity);
+		ivalDAO.closeCurrentSessionwithTransaction();
+	}
+	private List<Carrito> findAllCarritos() {
+		ivalDAO.openCurrentSession();
+		List<Carrito> entities = ivalDAO.findAllCarritos();
+		ivalDAO.closeCurrentSession();
+		return entities;
+	}
+	
+//	//Contiene
+//	private void persistContiene(Contiene entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.persist(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private void updateContiene(Contiene entity) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		ivalDAO.update(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private Carrito findContieneById(String id) {
+//		ivalDAO.openCurrentSession();
+//		Contiene entity = ivalDAO.findContieneById(id);
+//		ivalDAO.closeCurrentSession();
+//		return entity;
+//	}
+//	private void deleteContiene(String id) {
+//		ivalDAO.openCurrentSessionwithTransaction();
+//		Contiene entity = ivalDAO.findContieneById(id);
+//		ivalDAO.delete(entity);
+//		ivalDAO.closeCurrentSessionwithTransaction();
+//	}
+//	private List<Contiene> findAllContiene() {
+//		ivalDAO.openCurrentSession();
+//		List<Contiene> entities = ivalDAO.findAllContiene();
+//		ivalDAO.closeCurrentSession();
+//		return entities;
+//	}	
 	
 	
 }
