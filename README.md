@@ -60,4 +60,5 @@ Hibernate is configured, DAO is created, corrected and given an interface. Servl
 
 
 <h1>Let's see!: Creating the main view (static)</h1>
+Now we have a template of our marketplace. We are now focused on the back-frontend join and doing some connection tests.
 <img src="Files/indexview.PNG">
