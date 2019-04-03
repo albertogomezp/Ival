@@ -40,6 +40,12 @@ CREATE TABLE Contiene
   FOREIGN KEY (CodPro) REFERENCES Producto(CodPro),
   FOREIGN KEY (CodCar) REFERENCES Carrito(CodCar)
 );
+CREATE TABLE SecureLogin (
+  user varchar(20) NOT NULL,
+  password char(156)  NOT NULL,
+  condimento char(11)  NOT NULL
+)
+
 ```
 
 <h1>Let's build!: Creating the Eclipse project</h1>
