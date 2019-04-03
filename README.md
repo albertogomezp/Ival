@@ -4,7 +4,8 @@ IvAl is our brand new Marketplace test project. We are usign the following techn
 <ul>
     <li>MySQL</li>
     <li>Java Servlet</li>
-    <li>Hibernate Framework<li>
+    <li>Hibernate Framework</li>
+    <li>AJAX Requests</li>
     <li>More... (we will update this list, i promiss)</li>
 </ul>
 
