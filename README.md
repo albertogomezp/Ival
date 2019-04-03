@@ -8,7 +8,9 @@ IvAl is our brand new Marketplace test project. We are usign the following techn
     <li>AJAX Requests</li>
     <li>More... (we will update this list, i promiss)</li>
 </ul>
-
+<h1>Starting our project: role assignment </h1>
+<a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> Is going to develop the FrontEnd <br>
+<a href="https://github.com/proyectos-Albertogomp" target="_blank">Alberto Gómez Peña</a> Is going to develope the Backend <br> (Alberto is using two Github accounts, one is going to be used at home and the other at the office)
 <h1>First things first... Our Database:</h1>
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relational Schema, as following:
 <img src="Files/ERDiagram.png">
