@@ -61,7 +61,8 @@ Hibernate is configured, DAO is created, corrected and given an interface. Servl
 We know that keeping user credentials is crucial, and we have ensured that our project is as secure as we can and we have implemented a password salting method:<br>
 
 ```java
-	  public static String generateStorngPasswordHash(String password,String SaltStr) throws NoSuchAlgorithmException, InvalidKeySpecException
+	  public static String generateStorngPasswordHash(String password,String SaltStr) 
+	  	throws NoSuchAlgorithmException, InvalidKeySpecException
 	    {
 	        int iterations = 1000;
 	        char[] chars = password.toCharArray();
@@ -89,7 +90,8 @@ This functions generates for every user's password a byte array with random char
 Of course, we also need to check at login the user's password inserted and stored, we just use this:
 
 ```java
-public static boolean validatePassword(String originalPassword, String storedPassword) throws NoSuchAlgorithmException, InvalidKeySpecException
+public static boolean validatePassword(String originalPassword, String storedPassword) 
+	throws NoSuchAlgorithmException, InvalidKeySpecException
 	    {
 	        String[] parts = storedPassword.split(":");
 	        int iterations = Integer.parseInt(parts[0]);
