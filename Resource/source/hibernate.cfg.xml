@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE hibernate-configuration SYSTEM 
-"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-   <session-factory name="SessionFactory">
-   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-   <property name="hibernate.connection.url">jdbc:mysql://localhost/IvAl</property>
-   <property name="hibernate.connection.username">hibernate</property>
-   <property name="hibernate.connection.password">JUu91w8G8uPCTsgw</property>
-      <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-   <mapping class="com.ival.model.Producto"/>
-   <mapping class="com.ival.model.Carrito"/>
-   
-
-</session-factory>
+    <session-factory name="SessionFactory">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/IvAl</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">JUu91w8G8uPCTsgw</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--           <mapping class="com.testing.model.SecureLogin"/> -->
+           <mapping class="com.testing.model.Carrito"/>
+            <mapping class="com.testing.model.Producto"/>
+<!--              <mapping class="com.testing.model.Contiene"/> -->
+    </session-factory>
 </hibernate-configuration>

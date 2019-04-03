@@ -1,6 +1,5 @@
-package com.ival.dao;
-
-import com.ival.model.*;
+package com.testing.dao;
+import com.testing.model.*;
 
 import java.util.List;
 
@@ -63,6 +62,7 @@ public class IvalDAO implements InterfaceDAO {
 			 .configure()
 			 .addPackage("com.ival.model")
 			 .addAnnotatedClass(Carrito.class)
+//			 .addAnnotatedClass(SecureLogin.class)
 //			 .addAnnotatedClass(Contiene.class)
 			 .addAnnotatedClass(Producto.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()

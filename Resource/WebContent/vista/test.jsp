@@ -15,7 +15,7 @@
 					Hi, i came from servlet!
 				</h2>
 				<p>
-					Yes, really, i've just arrived. Everything is correct <br> (seriously)
+					Yes, really, i've just arrived. My creator (Alberto) have configured everything allright <br> (seriously)
 				</p>
 				<p>
 					<a class="btn btn-primary btn-large" href="#">Learn more</a>
