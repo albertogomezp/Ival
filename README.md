@@ -47,3 +47,7 @@ Okay... things are getting serious. We have already create the project, imported
 <h1> Control time: DAO, servlet, hibernate.... </h1>
 Hibernate is configured, DAO is created, corrected and given an interface. Servlet is created with some functions and prepared for the "action"s functions. Our project looks as follows:
 <img src="Files/projecttree.PNG">
+
+
+<h1>Let's see!: Creating the main view (static)</h1>
+<img src="Files/indexview.PNG">
