@@ -58,7 +58,7 @@ Okay... things are getting serious. We have already create the project, imported
 Hibernate is configured, DAO is created, corrected and given an interface. Servlet is created with some functions and prepared for the "action"s functions. Our project looks as follows:<br>
 <img src="Files/projecttree.PNG">
 <h2>Key fact: Security</h2>
-We know that keeping user credentials is crucial, and we have ensured that our project is as secure as we can and we have implemented a password salting method:<br>
+We know that keeping users' credentials secured is crucial, and we have ensured that our project is as secure as we can and we have implemented a password salting method:<br>
 
 ```java
 	  public static String generateStorngPasswordHash(String password,String SaltStr) 
