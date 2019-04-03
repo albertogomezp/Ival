@@ -7,7 +7,7 @@
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost/IvAl</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">JUu91w8G8uPCTsgw</property>
+        <property name="hibernate.connection.password"></property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 <!--           <mapping class="com.testing.model.SecureLogin"/> -->
            <mapping class="com.testing.model.Carrito"/>
