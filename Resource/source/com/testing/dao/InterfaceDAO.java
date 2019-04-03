@@ -1,12 +1,12 @@
-package com.ival.dao;
+package com.testing.dao;
 
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.ival.model.Carrito;
-import com.ival.model.Producto;
+import com.testing.model.*;
+
 
 public interface InterfaceDAO {
 
