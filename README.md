@@ -43,7 +43,8 @@ CREATE TABLE Contiene
 CREATE TABLE SecureLogin (
   user varchar(20) NOT NULL,
   password char(156)  NOT NULL,
-  condimento char(11)  NOT NULL
+  condimento char(11)  NOT NULL,
+  PRIMARY KEY (user)
 )
 
 ```
