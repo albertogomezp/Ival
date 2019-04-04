@@ -11,48 +11,13 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+<script>    <%@include file="js/scripts.js" %>	</script>
+<style> <%@include file="css/style.css" %> </style> 
 
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-	      html {
-	  font-size: 14px;
-	}
-	@media (min-width: 768px) {
-	  html {
-	    font-size: 16px;
-	  }
-	}
-	
-	.container {
-	  max-width: 960px;
-	}
-	
-	.pricing-header {
-	  max-width: 700px;
-	}
-	
-	.card-deck .card {
-	  min-width: 220px;
-	}
-    </style>
     
     <!-- Enlaces para JS -->
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -61,13 +26,14 @@
 <body>
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
   <h5 class="my-0 mr-md-auto font-weight-normal">IvAl - Tu tienda OnLine</h5>
+  <a class="nav-link" href="https://time.is/es/Spain" target="_blank"><span id="clock">&nbsp;</span></a> <!-- RELOJ -->
   <nav class="my-2 my-md-0 mr-md-3 " >
     <a class="p-2 text-dark" href="#">Alimentación</a>
     <a class="p-2 text-dark" href="#perfumeria">Perfumeria</a>
     <a class="p-2 text-dark" href="#ropa">Ropa</a>
     <a class="p-2 text-dark" href="#bazar">Bazar</a>
   </nav>
-  <a class="btn btn-outline-primary" href="#">Sing In</a> 
+  <a class="btn btn-outline-primary" href="#" onclick="testcon()">Sing In</a> 
     <!-- Button trigger modal -->
                <ul class="nav navbar-nav navbar-right">
                    <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
@@ -107,6 +73,9 @@
   <p class="lead">Desde nuestra tienda puedes comprar los productos más frescos del mercado.</p>
 </div>
 
+<div id="resultServlet">
+	
+</div>
 
 
 
@@ -121,7 +90,7 @@
         <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Pescado congelado</h4>
       </div>
@@ -132,9 +101,21 @@
         <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Gamba fresca</h4>
+      </div>
+      <div class="card-body">
+      <img src="vista/img/3.png" alt="Gamba fresca" height="175" width="175" >
+        <h1 class="card-title pricing-card-title">11,99 &#8364; <small class="text-muted">/ kilo</small></h1>
+
+        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+      </div>
+    </div>
+        <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Chuletón de ternera</h4>
+        <marquee scrollamount="1" scrolldelay="10" truespeed width="300" style="color:red"><n>¡¡OFERTA!!</n></marquee>
       </div>
       <div class="card-body">
       <img src="vista/img/3.png" alt="Gamba fresca" height="175" width="175" >
@@ -315,6 +296,7 @@
           <li><a class="text-muted" href="https://www.gitkraken.com/">GitKraken</a></li>
           <li><a class="text-muted" href="https://www.eclipse.org/">Eclipse</a></li>
           <li><a class="text-muted" href="https://www.viewnext.com/">ViewNext</a></li>
+          
         </ul>
       </div>
     </div>
