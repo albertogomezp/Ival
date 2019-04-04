@@ -116,12 +116,14 @@
         <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Chuletón de ternera</h4>
-        <marquee scrollamount="1" scrolldelay="10" truespeed width="300" style="color:red"><n>¡¡OFERTA!!</n></marquee>
+        <marquee scrollamount="1" scrolldelay="10" truespeed width="200" style="color:red"><n>¡¡OFERTA!!</n></marquee>
       </div>
       <div class="card-body">
-      <img src="vista/img/3.png" alt="Gamba fresca" height="175" width="175" >
-        <h1 class="card-title pricing-card-title">11,99 &#8364; <small class="text-muted">/ kilo</small></h1>
-
+      <img src="vista/img/13.png" alt="Chuleton de ternera" height="175" width="175" >
+      <div id="mismalinea">
+        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 11,99 &#8364;<small class="text-muted">/ kilo &nbsp;&nbsp;&nbsp;</small></h1></span>
+        <h1 class="card-title pricing-card-title">AHORA: 11,99 &#8364;<small class="text-muted">/ kilo</small></h1>
+	</div>
         <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
       </div>
     </div>
