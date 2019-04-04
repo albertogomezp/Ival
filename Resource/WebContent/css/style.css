@@ -46,3 +46,8 @@ text-decoration:line-through;
 }
 
 #mismalinea h1 { display:inline; }
+
+body{
+	
+	background-color: rgb(234,237,237);
+}
