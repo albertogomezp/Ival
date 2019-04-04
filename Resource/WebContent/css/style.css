@@ -33,3 +33,16 @@
 	.card-deck .card {
 	  min-width: 220px;
 	}
+	
+	.strikethrough {
+    position: relative;
+}
+ 
+
+
+.tachar{
+	color:pink;
+text-decoration:line-through;
+}
+
+#mismalinea h1 { display:inline; }
