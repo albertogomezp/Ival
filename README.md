@@ -140,3 +140,28 @@ INSERT INTO `producto` (`CodPro`, `NomPro`, `DescPro`, `PrePro`, `StockPro`) VAL
 (16, 'Tumbona de Aluminio - FLORABEST', 'Bastidor de aluminio de alta calidad, superficie resistente y de secado rápido\r\nPlegable para ahorra', 34.95, 25);
 
 ```
+
+<h1>First contact: Testing backend-frontend connection (static)</h1>
+We have just created a javascript function to request the servlet a <div> from other .jsp, this is what we get when we press the button:<br>
+<img src="Files/testservlet.PNG">
+
+This is done thanks to this script:<br>
+
+```javascript
+function callJqueryAjax(action){
+	  //var action = $('#name').val();
+	  $.ajax(
+	    {
+	      url     : '/IvAl/Core',
+	      method     : 'POST',
+	      data     : {action: action},
+	      success    : function(resultText){ $('#resultServlet').html(resultText); },
+	      error : function(jqXHR, exception){
+	        console.log('Error occured!!');
+	      }
+	    }
+	    );
+	  };
+```
+
+Where var action is initialized in the button with the param 'testconection'.
