@@ -28,13 +28,13 @@
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
   <h5 class="my-0 mr-md-auto font-weight-normal">IvAl - Tu tienda OnLine</h5>
   <a class="nav-link" href="https://time.is/es/Spain" target="_blank"><span id="clock">&nbsp;</span></a> <!-- RELOJ -->
-  <nav class="my-2 my-md-0 mr-md-3 " >
+  <nav class="my-2 my-md-0 mr-md-3 " >  
     <a class="p-2 text-dark" href="#">Alimentación</a>
     <a class="p-2 text-dark" href="#perfumeria">Perfumeria</a>
     <a class="p-2 text-dark" href="#ropa">Ropa</a>
     <a class="p-2 text-dark" href="#bazar">Bazar</a>
   </nav>
-					<button type="button" class="btn btn-success" onclick="callJqueryAjax('testconection')">
+					<button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">
 						Servlet
 					</button>    <!-- Button trigger modal -->
                <ul class="nav navbar-nav navbar-right">
@@ -44,6 +44,7 @@
        
             </div>
         </div>
+        
    </nav>
     
     <div id="loginModal" class="modal fade" role="dialog">
@@ -81,14 +82,14 @@
 
 
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Pechuga de pollo</h4>
       </div>
       <div class="card-body">
       <img src="vista/img/1.jpg" alt="Pechuga de pollo" height="175" width="175" >
         <h1 class="card-title pricing-card-title">5,99 &#8364; <small class="text-muted">/ kilo</small></h1>          
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
     <div class="card mb-3 shadow-sm">
@@ -99,7 +100,7 @@
       <img src="vista/img/2.png" alt="Pez espada" height="175" width="175" >
         <h1 class="card-title pricing-card-title">8,99 &#8364; <small class="text-muted">/ kilo</small></h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
     <div class="card mb-3 shadow-sm">
@@ -110,7 +111,7 @@
       <img src="vista/img/3.png" alt="Gamba fresca" height="175" width="175" >
         <h1 class="card-title pricing-card-title">11,99 &#8364; <small class="text-muted">/ kilo</small></h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
         <div class="card mb-3 shadow-sm">
@@ -121,10 +122,10 @@
       <div class="card-body">
       <img src="vista/img/13.png" alt="Chuleton de ternera" height="175" width="175" >
       <div id="mismalinea">
-        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 11,99 &#8364;<small class="text-muted">/ kilo &nbsp;&nbsp;&nbsp;</small></h1></span>
-        <h1 class="card-title pricing-card-title">AHORA: 11,99 &#8364;<small class="text-muted">/ kilo</small></h1>
+        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 15,99 &#8364;<small class="text-muted">/ kilo </small></h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title">AHORA: 10,99 &#8364;<small class="text-muted">/ kilo</small></h1>
 	</div>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+       <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
       </div>
     </div>
   </div>
@@ -144,17 +145,17 @@
 
 
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Eau de Toilette Pivoine</h4>
       </div>
       <div class="card-body">
       <img src="vista/img/4.png" alt="Eau de Toilette Pivoine" height="175" width="175" >
         <h1 class="card-title pricing-card-title">15,99 &#8364; <small class="text-muted">/ 50ml</small></h1>          
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">LA VIE EST BELLE </h4>
       </div>
@@ -162,10 +163,10 @@
       <img src="vista/img/5.jpg" alt="LA VIE EST BELLE " height="175" width="175" >
         <h1 class="card-title pricing-card-title">87,99 &#8364; <small class="text-muted">/ 100ml</small></h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">CK ONE</h4>
       </div>
@@ -173,7 +174,21 @@
       <img src="vista/img/6.jpg" alt="clone" height="175" width="175" >
         <h1 class="card-title pricing-card-title">34,85 &#8364; <small class="text-muted">/ 200ml</small></h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
+      </div>
+    </div>
+            <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">JOHNSON'S Colonia suave para bebé - 750ml</h4>
+        <marquee scrollamount="1" scrolldelay="10" truespeed width="200" style="color:red"><n>¡¡OFERTA!!</n></marquee>
+      </div>
+      <div class="card-body">
+      <img src="vista/img/14.jpg" alt="Colonia suave bebe" height="175" width="175" >
+      <div id="mismalinea">
+        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 6,99 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title">AHORA: 3,99 &#8364;</h1>
+	</div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
       </div>
     </div>
   </div>
@@ -192,17 +207,17 @@
 
 
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Camisa de Hombre</h4>
       </div>
       <div class="card-body">
       <img src="vista/img/7.jpg" alt="camishombre" height="175" width="175" >
         <h1 class="card-title pricing-card-title">30.70 &#8364; </h1>          
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Conjunto para bebe</h4>
       </div>
@@ -210,10 +225,10 @@
       <img src="vista/img/8.jpg" alt="LA VIE EST BELLE " height="175" width="175" >
         <h1 class="card-title pricing-card-title">17,99 &#8364;</h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Camiseta para mujer</h4>
       </div>
@@ -221,7 +236,21 @@
       <img src="vista/img/9.jpg" alt="clone" height="175" width="175" >
         <h1 class="card-title pricing-card-title">9,99 &#8364;</h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pantalón Escalada Turia Jean Snow Hombre.</h4>
+        <marquee scrollamount="1" scrolldelay="10" truespeed width="200" style="color:red"><n>¡¡OFERTA!!</n></marquee>
+      </div>
+      <div class="card-body">
+      <img src="vista/img/15.jpg" alt="pantalon hombre" height="175" width="175" >
+      <div id="mismalinea">
+        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 45,95 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title">AHORA: 39,95 &#8364;</h1>
+	</div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
       </div>
     </div>
   </div>
@@ -237,17 +266,17 @@
 
 
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Juego de herramientas</h4>
       </div>
       <div class="card-body">
       <img src="vista/img/10.jpg" alt="juegoherramienta" height="175" width="175" >
         <h1 class="card-title pricing-card-title">22,76 &#8364; </h1>          
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Aspiradora de mano</h4>
       </div>
@@ -255,10 +284,10 @@
       <img src="vista/img/11.jpg" alt="aspiradoramano" height="175" width="175" >
         <h1 class="card-title pricing-card-title">19,89 &#8364;</h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Cafetera Cecotec</h4>
       </div>
@@ -266,7 +295,21 @@
       <img src="vista/img/12.png" alt="cafetera" height="175" width="175" >
         <h1 class="card-title pricing-card-title">30,99 &#8364;</h1>
 
-        <button type="button" class="btn btn-lg btn-block btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Añadir al carrito</button>
+      </div>
+    </div>
+        <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Tumbona de Aluminio - FLORABEST</h4>
+        <marquee scrollamount="1" scrolldelay="10" truespeed width="200" style="color:red"><n>¡¡OFERTA!!</n></marquee>
+      </div>
+      <div class="card-body">
+      <img src="vista/img/16.jpg" alt="tumbona aluminio" height="175" width="175" >
+      <div id="mismalinea">
+        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 44,95 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title">AHORA: 34,95 &#8364;</h1>
+	</div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
       </div>
     </div>
   </div>
@@ -282,23 +325,23 @@
       <div class="col-6 col-md">
         <h5>Creadores</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" target="_blank" href="https://github.com/albertogomezp">Alberto Gomez Peña</a></li>
-          <li><a class="text-muted" target="_blank" href="https://github.com/ivanperezmolina">Iván Pérez Molina</a></li>
+          <li><a target="_blank" class="text-muted" target="_blank" href="https://github.com/albertogomezp">Alberto Gomez Peña</a></li>
+          <li><a target="_blank" class="text-muted" target="_blank" href="https://github.com/ivanperezmolina">Iván Pérez Molina</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
         <h5>Repositorio</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="https://github.com/albertogomezp/Ival/tree/master">Repositorio Oficial</a></li>
+          <li><a target="_blank" class="text-muted" href="https://github.com/albertogomezp/Ival/tree/master">Repositorio Oficial</a></li>
                   </ul>
       </div>
       <div class="col-6 col-md">
         <h5>Herramientas</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="https://getbootstrap.com/">Bootstrap</a></li>
-          <li><a class="text-muted" href="https://www.gitkraken.com/">GitKraken</a></li>
-          <li><a class="text-muted" href="https://www.eclipse.org/">Eclipse</a></li>
-          <li><a class="text-muted" href="https://www.viewnext.com/">ViewNext</a></li>
+          <li><a target="_blank" class="text-muted" href="https://getbootstrap.com/">Bootstrap</a></li>
+          <li><a target="_blank" class="text-muted" href="https://www.gitkraken.com/">GitKraken</a></li>
+          <li><a target="_blank" class="text-muted" href="https://www.eclipse.org/">Eclipse</a></li>
+          <li><a target="_blank" class="text-muted" href="https://www.viewnext.com/">ViewNext</a></li>
           
         </ul>
       </div>
