@@ -3,12 +3,12 @@ package com.testing.controller;
 import java.io.IOException;
 import java.sql.SQLException;
 
-//import java.io.IOException;
-//import java.security.NoSuchAlgorithmException;
-//import java.security.spec.InvalidKeySpecException;
-//import java.sql.SQLException;
-//import java.util.Enumeration;
-//import java.util.List;
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.sql.SQLException;
+import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,13 +25,16 @@ public class Core extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doPost");
 		doGet(request, response);
+		
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String action = request.getParameter("action");
+		System.out.println(action);
 			try {
 				switch(action) {
-				case "testconection":
+				case "test":
 				test(request,response);
 				break;
 				}
@@ -44,8 +47,10 @@ public class Core extends HttpServlet {
 
 	private void test(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
-		request.setAttribute("servletResponse", "hello from servlet");
+		//request.setAttribute("servletResponse", "hello from servlet");
+		System.out.print("ok");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/test.jsp");
 		dispatcher.forward(request, response);
 	}
 }
+

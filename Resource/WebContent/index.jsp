@@ -23,7 +23,8 @@
 
 </head>
 
-<body>
+<body onload="updateClock(); setInterval('updateClock()', 1000 )"><div class="container-fluid">
+
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
   <h5 class="my-0 mr-md-auto font-weight-normal">IvAl - Tu tienda OnLine</h5>
   <a class="nav-link" href="https://time.is/es/Spain" target="_blank"><span id="clock">&nbsp;</span></a> <!-- RELOJ -->
@@ -33,8 +34,9 @@
     <a class="p-2 text-dark" href="#ropa">Ropa</a>
     <a class="p-2 text-dark" href="#bazar">Bazar</a>
   </nav>
-  <a class="btn btn-outline-primary" href="#" onclick="testcon()">Sing In</a> 
-    <!-- Button trigger modal -->
+					<button type="button" class="btn btn-success" onclick="callJqueryAjax('testconection')">
+						Servlet
+					</button>    <!-- Button trigger modal -->
                <ul class="nav navbar-nav navbar-right">
                    <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
                 </ul>
@@ -74,7 +76,6 @@
 </div>
 
 <div id="resultServlet">
-	
 </div>
 
 
