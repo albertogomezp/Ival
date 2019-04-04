@@ -42,3 +42,18 @@ function callJqueryAjax(action){
 	    }
 	    );
 	  };
+  function testcon(){
+	  //var action = $('#name').val();
+	  //var action = "test";
+	  $.ajax(
+	    {
+	      url     : '/IvAl/Core',
+	      method     : 'POST',
+	      data     : {action: "test"},
+	      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("ok")},
+	      error : function(jqXHR, exception){
+	        console.log('Error occured!!');
+	      }
+	    }
+	    );
+	  };
