@@ -10,8 +10,8 @@ We are usign the following technologies: <br>
     <li>More... (we will update this list, i promiss)</li>
 </ul>
 
-Before continue we want to thanks to <a href="https://github.com/pablopinto">Pablo Pinto</a> for his great support and lessons given during our DUAL period. <br>
-Also, we want to thanks to Viewnext his labour in giving us learning facilities and giving us a fantastic experience of what is being in a office co-working with real developers, specially thanks to our tutor, Adrian Bogaril and our teachers from IES Campanillas
+Before continue we want  thank <a href="https://github.com/pablopinto">Pablo Pinto</a> for his great support and lessons given during our DUAL period. <br>
+Also, we want thanks Viewnext his labour in giving us learning facilities and giving us a fantastic experience of what is being in a office co-working with real developers, specially thanks to our tutor, Adrian Bogaril and our teachers from IES Campanillas
 <h1>Starting our project: role assignment </h1>
 <a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> Is going to develop the FrontEnd <br>
 <a href="https://github.com/proyectos-Albertogomp" target="_blank">Alberto Gómez Peña</a> Is going to develope the Backend <br> (Alberto is using two Github accounts, one is going to be used at home and the other at the office)
