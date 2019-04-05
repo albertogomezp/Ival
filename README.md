@@ -141,7 +141,7 @@ INSERT INTO `producto` (`CodPro`, `NomPro`, `DescPro`, `PrePro`, `StockPro`) VAL
 
 ```
 
-<h1>First contact: Testing backend-frontend connection (static)</h1>
+<h1>First contact: Testing backend-frontend connection</h1>
 We have just created a javascript function to request the servlet a <div> from other .jsp, this is what we get when we press the button:<br>
 <img src="Files/testservlet.PNG">
 
