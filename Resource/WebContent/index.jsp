@@ -9,11 +9,11 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
 
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
-<script>    <%@include file="js/scripts.js" %>	</script>
-<style> <%@include file="css/style.css" %> </style> 
+	    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+	<script>    <%@include file="js/scripts.js" %>	</script>
+	<style> <%@include file="css/style.css" %> </style> 
 
 
     
@@ -24,71 +24,89 @@
 
 </head>
 
-<body onload="updateClock(); setInterval('updateClock()', 1000 )"><div class="container-fluid">
+<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+<div class="container-fluid">
 
-   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
-  <h5 class="my-0 mr-md-auto font-weight-normal">IvAl - Tu tienda OnLine</h5>
-  <a class="nav-link" href="https://time.is/es/Spain" target="_blank"><span id="clock">&nbsp;</span></a> <!-- RELOJ -->
-  <nav class="my-2 my-md-0 mr-md-3 " >  
-    <a class="p-2 text-dark" href="#">Alimentación</a>
-    <a class="p-2 text-dark" href="#perfumeria">Perfumeria</a>
-    <a class="p-2 text-dark" href="#ropa">Ropa</a>
-    <a class="p-2 text-dark" href="#bazar">Bazar</a>
-  </nav>
-					<button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">
-						Servlet
-					</button>    <!-- Button trigger modal -->
-               <ul class="nav navbar-nav navbar-right">
-                   <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
-                </ul>
-                                              
-       
-            </div>
-        </div>
+<!--BARRA DE NAVEGACION-->
+
         
-   </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+          <img src="vista/img/carrito.png" width="60" alt="">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#alimentacion">Alimentación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#perfumeria">Perfumeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ropa">Ropa</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bazar">Bazar</a>
+                    </li>
+  
+                </ul>
+             	  <a class="btn btn-info" href="vista/login.jsp" role="button">Sign-In</a>&nbsp;
+		<button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">	Servlet	</button>  &nbsp;  <!-- Button trigger modal -->
+	               <ul class="nav navbar-nav navbar-right">
+	                   <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
+	                </ul>
+	                                              
+	       
+    </div>
+</div>
     
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h4>Carrito</h4>
-                <button type="button" class="close" data-dismiss="modal"> &times;</button>
-                
-                
-                
-            </div>
-            <div class="modal-body">
-                   <h1>MODAL TEXT</h1>
-            </div>
+	        <div class="modal-content">
+	            <div class="modal-header">
+	            <h4>Carrito</h4>
+	                <button type="button" class="close" data-dismiss="modal"> &times;</button>
+	                
+	                
+	                
+	            </div>
+	            <div class="modal-body">
+	                   <h1>MODAL TEXT</h1>
+	            </div>
   
-  </div>
-</div>
-</div>
+  		</div>
+		</div>
+	</div>
 
+ 
+            </div>
+            
 
-<hr>
+        </nav><!--FIN NAV -->
 
 
 <div class="container">
 <section id="carousel">
-<hr><hr>
+<hr><hr><hr><hr><hr><hr><hr><hr>
 <!-- Carrousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="vista/img/Carrousel1.png" class="d-block w-100" alt="...">
+      <img src="vista/img/Carrousel1.png" class="d-block w-100" alt="CarrouselFoto1">
     </div>
     <div class="carousel-item">
-      <img src="vista/img/Carrousel2.png" class="d-block w-100" alt="...">
+      <img src="vista/img/Carrousel2.png" class="d-block w-100" alt="CarrouselFoto2">
     </div>
     <div class="carousel-item">
-      <img src="vista/img/Carrousel3.png" class="d-block w-100" alt="...">
+      <img src="vista/img/Carrousel3.png" class="d-block w-100" alt="CarrouselFoto3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
