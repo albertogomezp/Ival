@@ -25,13 +25,13 @@
 </head>
 
 <body onload="updateClock(); setInterval('updateClock()', 1000 )">
-<div class="container-fluid">
 
 <!--BARRA DE NAVEGACION-->
 
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container">
+        
+  <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">
           <img src="vista/img/carrito.png" width="60" alt="">
         </a>
@@ -129,6 +129,7 @@
   <p class="lead">Desde nuestra tienda puedes comprar los productos más frescos del mercado.</p>
 </div>
 
+<!-- TEST  -->
 <div id="resultServlet">
 </div>
 
