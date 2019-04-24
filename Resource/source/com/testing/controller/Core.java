@@ -17,13 +17,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.testing.dao.IvalDAO;
+import com.testing.model.Producto;
+
 //import org.json.JSONArray;
 //import org.json.JSONObject;
 
 @WebServlet("/Core")
 public class Core extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	private static IvalDAO ivalDAO;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
 		doGet(request, response);
@@ -36,6 +39,9 @@ public class Core extends HttpServlet {
 				switch(action) {
 				case "test":
 				test(request,response);
+				break;
+				case "listar":
+				listar(request,response);
 				break;
 				}
 			} catch (SQLException e) {
@@ -52,5 +58,53 @@ public class Core extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/test.jsp");
 		dispatcher.forward(request, response);
 	}
+	
+	private void listar(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		RequestDispatcher dispatcher1 = request.getRequestDispatcher("index2.jsp"); // ??? 
+		List<Producto> listarProductos = findAll();
+		request.setAttribute("lista", listarProductos);
+		System.out.print("ok");
+		dispatcher1.forward(request, response);
+	}
+	
+	
+	
+	
+	
+	
+	
+	// --> hibernate
+	public Core() {
+		ivalDAO = new IvalDAO();
+	}
+
+
+	private List<Producto> findAll() {
+		ivalDAO.openCurrentSession();
+		List<Producto> competidores = ivalDAO.findAllProductos();
+		ivalDAO.closeCurrentSession();
+		return competidores;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 

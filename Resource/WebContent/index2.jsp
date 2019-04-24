@@ -55,12 +55,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#bazar">Bazar</a>
                     </li>
-   					<li class="nav-item">
-                        <a class="nav-link" href="index2.jsp">Pagina pruebas</a>
-                    </li>
+  
                 </ul>
              	  <a class="btn btn-info" href="vista/login.jsp" role="button">Sign-In</a>&nbsp;
-		<button type="button" class="btn btn-success" onclick="callJqueryAjax('listar')">	Servlet	</button>  &nbsp;  <!-- Button trigger modal -->
+		<button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">	Servlet	</button>  &nbsp;  <!-- Button trigger modal -->
 	               <ul class="nav navbar-nav navbar-right">
 	                   <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
 	                </ul>
@@ -124,6 +122,24 @@
 
 <!-- Section alimentacion -->
 <section id="alimentacion">
+		<div class="container-fluid">
+		
+			<div class="row">
+				<c:forEach var="articulo" items="${lista}">
+					  <div class="card-deck mb-3 text-center">
+					    <div class="card mb-3 shadow-sm">
+					      <div class="card-header">
+					        <h4 class="my-0 font-weight-normal"><c:out value="${articulo.nombre}"/></h4>
+					      </div>
+					      <div class="card-body">
+					      <img src="vista/img/<c:out value="${articulo.id}"/>.png" alt="<c:out value="${articulo.nombre}"/>" class="zoom" height="175" width="175" >
+					        <h1 class="card-title pricing-card-title"><c:out value="${articulo.precio}"/> &#8364; <small class="text-muted">/ ??</small></h1>          
+					        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="toCarrito(<c:out value="${articulo.id}"/>)">Añadir al carrito</button>
+					      </div>
+					    </div>
+				</c:forEach>
+			</div>
+		</div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 

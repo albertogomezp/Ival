@@ -28,6 +28,8 @@ function updateClock ( ) // A simple clock for the web.
   // Update the time display
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 }
+
+
 function callJqueryAjax(action){
 	  //var action = $('#name').val();
 	  $.ajax(
