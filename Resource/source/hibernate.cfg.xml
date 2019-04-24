@@ -12,6 +12,7 @@
 <!--           <mapping class="com.testing.model.SecureLogin"/> -->
            <mapping class="com.testing.model.Carrito"/>
             <mapping class="com.testing.model.Producto"/>
+             <mapping class="com.testing.controller.Core	"/>
 <!--              <mapping class="com.testing.model.Contiene"/> -->
     </session-factory>
 </hibernate-configuration>

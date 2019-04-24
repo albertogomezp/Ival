@@ -1,4 +1,4 @@
-package com.ival.model;
+package com.testing.model;
 
 public class Contiene {
 

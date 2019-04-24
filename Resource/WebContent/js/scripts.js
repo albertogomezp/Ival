@@ -37,7 +37,7 @@ function callJqueryAjax(action){
 	      url     : '/IvAl/Core',
 	      method     : 'POST',
 	      data     : {action: action},
-	      success    : function(resultText){ $('#resultServlet').html(resultText); },
+	      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("ok") },
 	      error : function(jqXHR, exception){
 	        console.log('Error occured!!');
 	      }

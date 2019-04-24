@@ -1,4 +1,7 @@
 package com.testing.dao;
+import javax.persistence.*;
+
+import com.testing.controller.Core;
 import com.testing.model.*;
 
 import java.util.List;
@@ -26,6 +29,7 @@ public class IvalDAO implements InterfaceDAO {
 	 */
 	@Override
 	public Session openCurrentSession() {
+		System.out.println("oks");
 		currentSession = getSessionFactory().openSession();
 		return currentSession;
 	}
@@ -60,11 +64,13 @@ public class IvalDAO implements InterfaceDAO {
 	private static SessionFactory getSessionFactory() {
 		Configuration configuration = new Configuration()
 			 .configure()
-			 .addPackage("com.ival.model")
+			 .addPackage("com.testing.model")
+			 .addPackage("com.testing.controller")
 			 .addAnnotatedClass(Carrito.class)
 //			 .addAnnotatedClass(SecureLogin.class)
 //			 .addAnnotatedClass(Contiene.class)
-			 .addAnnotatedClass(Producto.class);
+			 .addAnnotatedClass(Producto.class)
+			 .addAnnotatedClass(Core.class)			 ;
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
@@ -139,7 +145,9 @@ public class IvalDAO implements InterfaceDAO {
 	 */
 	@Override
 	public List<Producto> findAllProductos() {
-		 List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
+		System.out.println("ok ll");
+		@SuppressWarnings("unchecked")
+		List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from producto").list() ;
 		return entity;
 	}
 	//--> Carrito functions:
@@ -179,7 +187,8 @@ public class IvalDAO implements InterfaceDAO {
 	 */
 	@Override
 	public List<Carrito> findAllCarritos() {
-		 List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
+		 @SuppressWarnings("unchecked")
+		List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
 	}
 //	//--> Contiene functions:

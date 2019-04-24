@@ -3,11 +3,11 @@ package com.testing.controller;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-import java.sql.SQLException;
-import java.util.Enumeration;
+//import java.io.IOException;
+//import java.security.NoSuchAlgorithmException;
+//import java.security.spec.InvalidKeySpecException;
+//import java.sql.SQLException;
+//import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -26,7 +26,6 @@ import com.testing.model.Producto;
 @WebServlet("/Core")
 public class Core extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static IvalDAO ivalDAO;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
 		doGet(request, response);
@@ -35,7 +34,7 @@ public class Core extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String action = request.getParameter("action");
 		System.out.println(action);
-			try {
+		try {
 				switch(action) {
 				case "test":
 				test(request,response);
@@ -61,33 +60,16 @@ public class Core extends HttpServlet {
 	
 	private void listar(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
+		System.out.println("ok");
 		RequestDispatcher dispatcher1 = request.getRequestDispatcher("index2.jsp"); // ??? 
-		List<Producto> listarProductos = findAll();
+		System.out.println("--");
+		List<Producto> listarProductos = SubCore.findAll();
 		request.setAttribute("lista", listarProductos);
-		System.out.print("ok");
+		System.out.println("ok");
 		dispatcher1.forward(request, response);
 	}
 	
-	
-	
-	
-	
-	
-	
-	// --> hibernate
-	public Core() {
-		ivalDAO = new IvalDAO();
-	}
 
-
-	private List<Producto> findAll() {
-		ivalDAO.openCurrentSession();
-		List<Producto> competidores = ivalDAO.findAllProductos();
-		ivalDAO.closeCurrentSession();
-		return competidores;
-	}
-	
-	
 	
 	
 	

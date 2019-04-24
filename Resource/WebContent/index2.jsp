@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"   pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,7 @@
 
 </head>
 
-<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+<body>
 
 <!--BARRA DE NAVEGACION-->
 
@@ -60,7 +59,7 @@
              	  <a class="btn btn-info" href="vista/login.jsp" role="button">Sign-In</a>&nbsp;
 		<button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">	Servlet	</button>  &nbsp;  <!-- Button trigger modal -->
 	               <ul class="nav navbar-nav navbar-right">
-	                   <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary""> Carrito </span> </a></li>
+	                   <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary"> Carrito </span> </a></li>
 	                </ul>
 	                                              
 	       
@@ -137,6 +136,7 @@
 					        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="toCarrito(<c:out value="${articulo.id}"/>)">Añadir al carrito</button>
 					      </div>
 					    </div>
+					   </div>
 				</c:forEach>
 			</div>
 		</div>
@@ -194,7 +194,7 @@
       <div class="card-body">
       <img src="vista/img/13.png" alt="Chuleton de ternera" class="zoom" height="175" width="175" >
       <div id="mismalinea">
-        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 15,99 &#8364;<small class="text-muted">/ kilo </small></h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title"></span class="tachar">ANTES: 15,99 &#8364;<small class="text-muted">/ kilo </small></h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <h1 class="card-title pricing-card-title">AHORA: 10,99 &#8364;<small class="text-muted">/ kilo</small></h1>
 	</div>
        <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
@@ -257,7 +257,7 @@
       <div class="card-body">
       <img src="vista/img/14.png" alt="Colonia suave bebe" class="zoom" height="175" width="175" >
       <div id="mismalinea">
-        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 6,99 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title"></span class="tachar">ANTES: 6,99 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <h1 class="card-title pricing-card-title">AHORA: 3,99 &#8364;</h1>
 	</div>
         <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
@@ -378,7 +378,7 @@
       <div class="card-body">
       <img src="vista/img/16.png" alt="tumbona aluminio" class="zoom" height="175" width="175" >
       <div id="mismalinea">
-        <h1 class="card-title pricing-card-title"><span class="tachar">ANTES: 44,95 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="card-title pricing-card-title"></span class="tachar">ANTES: 44,95 &#8364;</h1></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <h1 class="card-title pricing-card-title">AHORA: 34,95 &#8364;</h1>
 	</div>
         <button type="button" class="btn btn-lg btn-block btn-outline-info">Añadir al carrito</button>
