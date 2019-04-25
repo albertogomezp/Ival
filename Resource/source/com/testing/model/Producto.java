@@ -38,6 +38,11 @@ public class Producto  {
 		PrePro = prePro;
 		StockPro = stockPro;
 	}
+	@Override
+	public String toString() {
+		return "Producto [CodPro=" + CodPro + ", NomPro=" + NomPro + ", DescPro=" + DescPro + ", PrePro=" + PrePro
+				+ ", StockPro=" + StockPro + "]";
+	}
 	
 	
 	
