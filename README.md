@@ -15,7 +15,14 @@ Also, we want thanks Viewnext his labour in giving us learning facilities and gi
 <h1>Starting our project: role assignment </h1>
 <a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> Is going to develop the FrontEnd <br>
 <a href="https://github.com/proyectos-Albertogomp" target="_blank">Alberto Gómez Peña</a> Is going to develope the Backend <br> (Alberto is using two Github accounts, one is going to be used at home and the other at the office)
-<h1>First things first... Our Database:</h1>
+
+Index:
+<ul>
+	<li><a href="#1">First things first... Our Database:<a></li>
+	
+
+
+<h1 id"1">First things first... Our Database:</h1>
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relational Schema, as following:
 <img src="Files/ERDiagram2.png">
 And it generated from the Relational Schema, this SQL Query (which we edited):
