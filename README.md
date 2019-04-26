@@ -20,15 +20,16 @@ Index:
 <ul>
 	<li><a href="#1">First things first... Our Database:<a></li>
 	<li><a href="#2">Let's build!: Creating the Eclipse project<a></li>
-	<li><a href="#3"> Control time: DAO, servlet, hibernate.... <a></li>
+	<li><a href="#3"> Control time: DAO, servlet, hibernate.... <a>
 		<ul>
 			<li><a href="#3.1">Key fact: Security<a></li>
 		<ul>
+	</li>		
 	<li><a href="#4">Let's see!: Creating the main view (static)<a></li>
-	<li><a href="#5">First things first... Our Database:<a></li>
-	<li><a href="#6">First things first... Our Database:<a></li>
-	<li><a href="#7">First things first... Our Database:<a></li><li><a href="#1">First things first... Our Database:<a></li>
-
+	<li><a href="#5">Wait a second: Database values<a></li>
+	<li><a href="#6">First contact: Testing backend-frontend connection<a></li>
+	<li><a href="#7">Hibernate's turn: First big upgrade<a></li>
+</ul>
 
 <h1 id"1">First things first... Our Database:</h1>
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relational Schema, as following:
@@ -136,7 +137,7 @@ Now we have a template of our marketplace. We are now focused on the back-fronte
 <img src="Files/indexview.PNG">
 
 
-<h2>Wait a second: Database values</h2>
+<h2 id="5">Wait a second: Database values</h2>
 
 Before anything else, we need to deploy some data, just for testing propourses (is this way written?, nevermind...) here they are: <br>
 ```SQL
@@ -160,7 +161,7 @@ INSERT INTO `producto` (`CodPro`, `NomPro`, `DescPro`, `PrePro`, `StockPro`) VAL
 
 ```
 
-<h1>First contact: Testing backend-frontend connection</h1>
+<h1 id="6">First contact: Testing backend-frontend connection</h1>
 We have just created a javascript function to request the servlet a <div> from other .jsp, this is what we get when we press the button:<br>
 <img src="Files/testservlet.PNG">
 
@@ -185,7 +186,7 @@ function callJqueryAjax(action){
 
 Where var action is initialized in the button with the param 'testconection'.
 
-<h1>Hibernate's turn: First big upgrade</h1>
+<h1 id="7">Hibernate's turn: First big upgrade</h1>
 It was hard, but we can no continue with our proyect. Ivan has been fixing some style issues while Alberto has been fighting against hibernate and our servlet.<br>
 instead of keeping just one Servlet (Core, for friends) we are using two (Core and SubCore) because when we initialize our DAO in Core, there's a crash that mess everything on our code and now, putting it onto SubCore, works (we have to fix a temp patch used for testing the function) smoothly. In our testing page we can now see the products as in index, but we need to do some changes, as follows:<br>
 <ul>
