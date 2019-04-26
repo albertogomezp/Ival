@@ -5,19 +5,19 @@ We are usign the following technologies: <br>
 <ul>
     <li>MySQL</li>
     <li>Java Servlet</li>
+	<li>JSP</li>
     <li>Hibernate Framework</li>
     <li>AJAX Requests</li>
+    <li>Maven Dependencies</li>
     <li>More... (we will update this list, i promiss)</li>
 </ul>
-
 Before continue we want  thank Pablo Pinto for his great support and lessons given during our DUAL period. <br>
 Also, we want thanks Viewnext his labour in giving us learning facilities and giving us a fantastic experience of what is being in a office co-working with real developers, specially thanks to our tutor, Adrian Bogaril and our teachers from IES Campanillas
-<h1>Starting our project: role assignment </h1>
-<a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> Is going to develop the FrontEnd <br>
-<a href="https://github.com/proyectos-Albertogomp" target="_blank">Alberto Gómez Peña</a> Is going to develope the Backend <br> (Alberto is using two Github accounts, one is going to be used at home and the other at the office)
+
 
 Index:
 <ul>
+	<li><a href="#0">Starting our project: role assignment <a></li>
 	<li><a href="#1">First things first... Our Database:<a></li>
 	<li><a href="#2">Let's build!: Creating the Eclipse project<a></li>
 	<li><a href="#3">Control time: DAO, servlet, hibernate.... <a><br>
@@ -27,6 +27,11 @@ Index:
 	<li><a href="#6">First contact: Testing backend-frontend connection<a></li>
 	<li><a href="#7">Hibernate's turn: First big upgrade<a></li>
 </ul>
+
+<h1 id="0">Starting our project: role assignment </h1>
+<a href="https://github.com/ivanperezmolina" target="_blank">Iván Pérez Molina</a> Is going to develop the FrontEnd <br>
+<a href="https://github.com/proyectos-Albertogomp" target="_blank">Alberto Gómez Peña</a> Is going to develope the Backend <br> (Alberto is using two Github accounts, one is going to be used at home and the other at the office)
+
 
 <h1 id"1">First things first... Our Database:</h1>
 We have designed it using <a href="https://erdplus.com" target="_blank">ERDPlus</a> for the E/R Diagram and Relational Schema, as following:
