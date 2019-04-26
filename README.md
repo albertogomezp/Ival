@@ -189,7 +189,7 @@ function callJqueryAjax(action){
 Where var action is initialized in the button with the param 'testconection'.
 
 <h1 id="7">Hibernate's turn: First big upgrade</h1>
-It was hard, but we can no continue with our proyect. Ivan has been fixing some style issues while Alberto has been fighting against hibernate and our servlet.<br>
+We can now continue with our proyect. Ivan has been fixing some style issues while Alberto has been fighting against hibernate and our servlet.<br>
 instead of keeping just one Servlet (Core, for friends) we are using two (Core and SubCore) because when we initialize our DAO in Core, there's a crash that mess everything on our code and now, putting it onto SubCore, works (we have to fix a temp patch used for testing the function) smoothly. In our testing page we can now see the products as in index, but we need to do some changes, as follows:<br>
 <ul>
 	<li>Add table to BD: CatProductos for tag our products in different categories (food, clothes, tools...)</li>
