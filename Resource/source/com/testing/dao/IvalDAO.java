@@ -51,6 +51,7 @@ public class IvalDAO implements InterfaceDAO {
 			 .configure()
 			 .addPackage("com.testing.model")
 //			 .addPackage("com.testing.controller")
+			 .addAnnotatedClass(SecureLogin.class)
 			 .addAnnotatedClass(Carrito.class)
 			 .addAnnotatedClass(Producto.class);
 //			 .addAnnotatedClass(SecureLogin.class)
@@ -160,6 +161,57 @@ public class IvalDAO implements InterfaceDAO {
 		List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
 	}
+	
+	//--> SecureLogin Functions
+		/* (non-Javadoc)
+		 * @see com.testing.dao.ivalDAO#signin(com.testing.model.SecureLogin)
+		 */
+		@Override
+		public void signin(SecureLogin entity) {
+			getCurrentSession().save(entity);
+		}
+
+		/* (non-Javadoc)
+		 * @see com.testing.dao.ivalDAO#updateUser(com.testing.model.SecureLogin)
+		 */
+		@Override
+		public void updateUser(SecureLogin entity) {
+			getCurrentSession().update(entity);
+		}
+
+		/* (non-Javadoc)
+		 * @see com.testing.dao.ivalDAO#login(java.lang.String)
+		 */
+		@Override
+		public SecureLogin login(String username) {
+			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(Integer.parseInt(username)));
+			return entity;
+		}
+
+		/* (non-Javadoc)
+		 * @see com.testing.dao.ivalDAO#delete(com.testing.model.SecureLogin)
+		 */
+		@Override
+		public void delete(SecureLogin entity) {
+			getCurrentSession().delete(entity);
+		}
+
+		/* (non-Javadoc)
+		 * @see com.testing.dao.ivalDAO#findAllUsers()
+		 */
+		@Override
+		public List<SecureLogin> findAllUsers() {
+		 @SuppressWarnings("unchecked")
+			List<SecureLogin> entity = (List<SecureLogin>) getCurrentSession().createQuery("from SecureLogin").list() ;
+			return entity;
+		}
+	
+	
+	
+	
+	
+	
+	
 //	//--> Contiene functions:
 //	public void persist(Contiene entity) {
 //		getCurrentSession().save(entity);

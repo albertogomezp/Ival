@@ -1,6 +1,8 @@
 package com.testing.controller;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
  
 import com.testing.model.*;
+import com.testing.security.Passwords;
 
 
 
@@ -35,9 +38,14 @@ public class Core extends HttpServlet {
 				case "listar":
 				listar(request,response);
 				break;
+				case "login":
+				login(request,response);
+				break;
+				case "signup":
+				signin(request,response);
+				break;
 				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+			} catch (SQLException | NoSuchAlgorithmException | InvalidKeySpecException e) {
 				e.printStackTrace();
 			}
 	}
@@ -64,24 +72,44 @@ public class Core extends HttpServlet {
 		dispatcher1.forward(request, response);
 	}
 	
-
+	@SuppressWarnings({ "unused", "null" })
+	private void login(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException, NoSuchAlgorithmException, InvalidKeySpecException {
+		String username = request.getParameter("username");
+		String pass = request.getParameter("password");
+		//String salt = Passwords.getSalt().toString();
+		//String password = Passwords.generateStorngPasswordHash(pass, salt);
+		SecureLogin log = new SecureLogin(username,pass);
+		boolean Log = SubCore.doLog(username,pass);
+		if(Log) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/userArea.jsp"); // ??? 
+			request.setAttribute("username", username);
+			dispatcher.forward(request, response);
+		}
+		else {
+			RequestDispatcher dispatcher = null;
+			request.setAttribute("msg", "Error in login");
+			dispatcher.forward(request, response);
+		}
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@SuppressWarnings("unused")
+	private void signin(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException, NoSuchAlgorithmException, InvalidKeySpecException {
+		String username = request.getParameter("username");
+		String pass = request.getParameter("password");
+		System.out.println(username+" "+pass);
+		String salt = Passwords.getSalt().toString();
+		String password = Passwords.generateStorngPasswordHash(pass, salt);
+		
+		SecureLogin log = new SecureLogin(username,pass);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp"); // ??? 
+		request.setAttribute("username", username);
+		dispatcher.forward(request, response);
+		
+		
+	}
 	
 }
 

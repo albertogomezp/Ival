@@ -68,4 +68,14 @@ public interface InterfaceDAO {
 	//		return entity;
 	//	}
 
+	void delete(SecureLogin entity);
+
+	SecureLogin login(String username);
+
+	void updateUser(SecureLogin entity);
+
+	void signin(SecureLogin entity);
+
+	List<SecureLogin> findAllUsers();
+
 }
