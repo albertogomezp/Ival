@@ -19,7 +19,15 @@ Also, we want thanks Viewnext his labour in giving us learning facilities and gi
 Index:
 <ul>
 	<li><a href="#1">First things first... Our Database:<a></li>
-	
+	<li><a href="#2">Let's build!: Creating the Eclipse project<a></li>
+	<li><a href="#3"> Control time: DAO, servlet, hibernate.... <a></li>
+		<ul>
+			<li><a href="#3.1">Key fact: Security<a></li>
+		<ul>
+	<li><a href="#4">Let's see!: Creating the main view (static)<a></li>
+	<li><a href="#5">First things first... Our Database:<a></li>
+	<li><a href="#6">First things first... Our Database:<a></li>
+	<li><a href="#7">First things first... Our Database:<a></li><li><a href="#1">First things first... Our Database:<a></li>
 
 
 <h1 id"1">First things first... Our Database:</h1>
@@ -63,12 +71,12 @@ CREATE TABLE SecureLogin (
 
 ```
 
-<h1>Let's build!: Creating the Eclipse project</h1>
+<h1 id="2">Let's build!: Creating the Eclipse project</h1>
 Okay... things are getting serious. We have already create the project, imported some hibernate libs and created classes and config file.
-<h1> Control time: DAO, servlet, hibernate.... </h1>
+<h1 id="3"> Control time: DAO, servlet, hibernate.... </h1>
 Hibernate is configured, DAO is created, corrected and given an interface. Servlet is created with some functions and prepared for the "action"s functions. Our project looks as follows:<br>
 <img src="Files/projecttree.PNG">
-<h2>Key fact: Security</h2>
+<h2 id="3.1">Key fact: Security</h2>
 We know that keeping users' credentials secured is crucial, and we have ensured that our project is as secure as we can and we have implemented a password salting method:<br>
 
 ```java
@@ -123,7 +131,7 @@ public static boolean validatePassword(String originalPassword, String storedPas
 ```
 this way, the password is just "unsafe" until reaching these functions, the server-side is safe, but we have to also secure the client-side (we will talk about this later)<br>
 
-<h1>Let's see!: Creating the main view (static)</h1>
+<h1 id="4">Let's see!: Creating the main view (static)</h1>
 Now we have a template of our marketplace. We are now focused on the back-frontend join and doing some connection tests.<br>
 <img src="Files/indexview.PNG">
 
