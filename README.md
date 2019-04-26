@@ -180,4 +180,7 @@ instead of keeping just one Servlet (Core, for friends) we are using two (Core a
 	<li>Add more information to show</li>
 	<li>Fix some functions</li>
 </ul>
+<img src="Files/index2.PNG">
+
+
 
