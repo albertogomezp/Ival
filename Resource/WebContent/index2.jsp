@@ -124,47 +124,26 @@
     <section id="alimentacion">
       <div class="container-fluid">
         
-<!--         <div class="row">Esto -->
-<%--           <c:forEach var="articulo" items="${lista}"> --%>
-<!--           <div class="card-deck mb-3 text-center"> -->
-<!--             <div class="card mb-3 shadow-sm"> -->
-<!--               <div class="card-header"> -->
-<%--                 <h4 class="my-0 font-weight-normal"><c:out value='${articulo.NomPro}'/></h4> --%>
-<!--               </div> -->
-<!--               <div class="card-body"> -->
-<%--                 <img src="vista/img/<c:out value='${articulo.CodPro}'/>.png" alt="<c:out value='${articulo.NomPro}'/>" class="zoom" height="175" width="175" > --%>
-<%--                 <h1 class="card-title pricing-card-title"><c:out value='${articulo.PrePro}'/> &#8364; <small class="text-muted">/ ??</small></h1>           --%>
-<%--                 <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="toCarrito(<c:out value='${articulo.CodPro}'/>)">to cart</button> --%>
-<!--               </div> -->
-<!--             </div> -->
-<!--           </div>lap -->
-<%--         </c:forEach> --%>
-<!--       </div> -->
-					<table id="Tabla1"	class="table table-striped text-center  bg-light">
-	<c:out value="${bunny}"/>
-	<c:forEach var="competidor" items="${lista}"> 
-	
-							<tr id="tr<c:out value="${competidor.CodPro}" />">
-							<td id="id " ><c:out value="${competidor.NomPro}" /></td>
-							<td>
-								<button id=" " type="button" class="btn btn-primary text-light" onclick="AbrirModal()">	
-								Editar
-							</button>
-						</td>
-						<td>
-							<button type="button" class="btn btn-danger" onclick="quitarCompetidor()">
-							
-							<a  class="text-light" >Eliminar</a>
-						</button>
-					</td>
+        <div class="row">
+          <c:forEach var="articulo" items="${lista}">
+          <div class="card-deck mb-3 text-center ml-auto mr-auto">
+            <div class="card mb-3 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal"><c:out value='${articulo.getNomPro()}'/></h4>
+              </div>
+              <div class="card-body">
+                <img src="vista/img/<c:out value='${articulo.getCodPro()}'/>.png" alt="<c:out value='${articulo.getNomPro()}'/>" class="zoom" height="175" width="175" >
+                <h1 class="card-title pricing-card-title"><c:out value='${articulo.getPrePro()}'/> &#8364; <small class="text-muted">/ ??</small></h1>          
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="toCarrito(<c:out value='${articulo.getCodPro()}'/>)">to cart</button>
+              </div>
+            </div>
+          </div>
+        </c:forEach>
+      </div>
 					
-				</tr>
-			</c:forEach>
-
-		</table>
 
 
-    </div>hasta aqui 
+    </div>
     
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       

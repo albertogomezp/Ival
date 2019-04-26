@@ -61,7 +61,6 @@ public class Core extends HttpServlet {
 		request.setAttribute("lista", listarProductos);
 		request.setAttribute("bunny", "salu2");
 		System.out.println("ok, enviando lista:\n"+listarProductos.toString());
-		System.out.println(request.getParameter("lista").toString());
 		dispatcher1.forward(request, response);
 	}
 	

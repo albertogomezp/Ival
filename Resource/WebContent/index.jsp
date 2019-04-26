@@ -69,8 +69,6 @@
 							pruebas</a></li>
 				</ul>
 				<a class="btn btn-info" href="vista/login.jsp" role="button">Sign-In</a>&nbsp;
-				<button type="button" class="btn btn-success"
-					onclick="callJqueryAjax('test')">Servlet</button>
 				&nbsp;
 				<!-- Button trigger modal -->
 				<ul class="nav navbar-nav navbar-right">
@@ -155,10 +153,6 @@
 					productos más frescos del mercado.</p>
 			</div>
 
-			<!-- TEST  -->
-			<div class="col-md-6 bg-dark text-light text-center" id="resultServlet">
-				UwU
-				</div>
 
 
 

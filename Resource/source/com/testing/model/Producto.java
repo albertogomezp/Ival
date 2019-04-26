@@ -43,6 +43,36 @@ public class Producto  {
 		return "Producto [CodPro=" + CodPro + ", NomPro=" + NomPro + ", DescPro=" + DescPro + ", PrePro=" + PrePro
 				+ ", StockPro=" + StockPro + "]";
 	}
+	public Integer getCodPro() {
+		return CodPro;
+	}
+	public void setCodPro(Integer codPro) {
+		CodPro = codPro;
+	}
+	public String getNomPro() {
+		return NomPro;
+	}
+	public void setNomPro(String nomPro) {
+		NomPro = nomPro;
+	}
+	public String getDescPro() {
+		return DescPro;
+	}
+	public void setDescPro(String descPro) {
+		DescPro = descPro;
+	}
+	public float getPrePro() {
+		return PrePro;
+	}
+	public void setPrePro(float prePro) {
+		PrePro = prePro;
+	}
+	public Integer getStockPro() {
+		return StockPro;
+	}
+	public void setStockPro(Integer stockPro) {
+		StockPro = stockPro;
+	}
 	
 	
 	
