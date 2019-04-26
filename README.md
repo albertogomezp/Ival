@@ -21,7 +21,7 @@ Index:
 	<li><a href="#1">First things first... Our Database:<a></li>
 	<li><a href="#2">Let's build!: Creating the Eclipse project<a></li>
 	<li><a href="#3">Control time: DAO, servlet, hibernate.... <a><br>
-		<a href="#3.1">Key fact: Security<a></li>		
+		<a href="#3.1" style="text-align: right">Key fact: Security<a></li>		
 	<li><a href="#4">Let's see!: Creating the main view (static)<a></li>
 	<li><a href="#5">Wait a second: Database values<a></li>
 	<li><a href="#6">First contact: Testing backend-frontend connection<a></li>
