@@ -2,29 +2,29 @@ package com.testing.dao;
 
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+//import org.hibernate.Session;
+//import org.hibernate.Transaction;
 
 import com.testing.model.*;
 
 
 public interface InterfaceDAO {
 
-	Session openCurrentSession();
-
-	Session openCurrentSessionwithTransaction();
-
-	void closeCurrentSession();
-
-	void closeCurrentSessionwithTransaction();
-
-	Session getCurrentSession();
-
-	void setCurrentSession(Session currentSession);
-
-	Transaction getCurrentTransaction();
-
-	void setCurrentTransaction(Transaction currentTransaction);
+//	Session openCurrentSession();
+//
+//	Session openCurrentSessionwithTransaction();
+//
+//	void closeCurrentSession();
+//
+//	void closeCurrentSessionwithTransaction();
+//
+//	Session getCurrentSession();
+//
+//	void setCurrentSession(Session currentSession);
+//
+//	Transaction getCurrentTransaction();
+//
+//	void setCurrentTransaction(Transaction currentTransaction);
 
 	//--> Producto functions:
 	void persist(Producto entity);

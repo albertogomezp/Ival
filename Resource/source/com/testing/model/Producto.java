@@ -1,4 +1,4 @@
-package com.ival.model;
+package com.testing.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,6 +36,41 @@ public class Producto  {
 		NomPro = nomPro;
 		DescPro = descPro;
 		PrePro = prePro;
+		StockPro = stockPro;
+	}
+	@Override
+	public String toString() {
+		return "Producto [CodPro=" + CodPro + ", NomPro=" + NomPro + ", DescPro=" + DescPro + ", PrePro=" + PrePro
+				+ ", StockPro=" + StockPro + "]";
+	}
+	public Integer getCodPro() {
+		return CodPro;
+	}
+	public void setCodPro(Integer codPro) {
+		CodPro = codPro;
+	}
+	public String getNomPro() {
+		return NomPro;
+	}
+	public void setNomPro(String nomPro) {
+		NomPro = nomPro;
+	}
+	public String getDescPro() {
+		return DescPro;
+	}
+	public void setDescPro(String descPro) {
+		DescPro = descPro;
+	}
+	public float getPrePro() {
+		return PrePro;
+	}
+	public void setPrePro(float prePro) {
+		PrePro = prePro;
+	}
+	public Integer getStockPro() {
+		return StockPro;
+	}
+	public void setStockPro(Integer stockPro) {
 		StockPro = stockPro;
 	}
 	

@@ -1,4 +1,7 @@
 package com.testing.dao;
+//import javax.persistence.*;
+
+//import com.testing.controller.Core;
 import com.testing.model.*;
 
 import java.util.List;
@@ -21,37 +24,23 @@ public class IvalDAO implements InterfaceDAO {
 	public IvalDAO() {
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#openCurrentSession()
-	 */
-	@Override
+
 	public Session openCurrentSession() {
+		System.out.println("oks");
 		currentSession = getSessionFactory().openSession();
 		return currentSession;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#openCurrentSessionwithTransaction()
-	 */
-	@Override
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = getSessionFactory().openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#closeCurrentSession()
-	 */
-	@Override
 	public void closeCurrentSession() {
 		currentSession.close();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#closeCurrentSessionwithTransaction()
-	 */
-	@Override
 	public void closeCurrentSessionwithTransaction() {
 		currentTransaction.commit();
 		currentSession.close();
@@ -60,45 +49,30 @@ public class IvalDAO implements InterfaceDAO {
 	private static SessionFactory getSessionFactory() {
 		Configuration configuration = new Configuration()
 			 .configure()
-			 .addPackage("com.ival.model")
+			 .addPackage("com.testing.model")
+//			 .addPackage("com.testing.controller")
 			 .addAnnotatedClass(Carrito.class)
+			 .addAnnotatedClass(Producto.class);
 //			 .addAnnotatedClass(SecureLogin.class)
 //			 .addAnnotatedClass(Contiene.class)
-			 .addAnnotatedClass(Producto.class);
-		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-				.applySettings(configuration.getProperties());
+//			 .addAnnotatedClass(Core.class)	;
+		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
  		return sessionFactory;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#getCurrentSession()
-	 */
-	@Override
 	public Session getCurrentSession() {
 		return currentSession;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#setCurrentSession(org.hibernate.Session)
-	 */
-	@Override
 	public void setCurrentSession(Session currentSession) {
 		this.currentSession = currentSession;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#getCurrentTransaction()
-	 */
-	@Override
 	public Transaction getCurrentTransaction() {
 		return currentTransaction;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.ival.dao.InterfaceDAO#setCurrentTransaction(org.hibernate.Transaction)
-	 */
-	@Override
+	
 	public void setCurrentTransaction(Transaction currentTransaction) {
 		this.currentTransaction = currentTransaction;
 	} 
@@ -139,7 +113,10 @@ public class IvalDAO implements InterfaceDAO {
 	 */
 	@Override
 	public List<Producto> findAllProductos() {
-		 List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
+		System.out.println("ok ll");
+		@SuppressWarnings("unchecked")
+		List<Producto> entity = (List<Producto>) getCurrentSession().createQuery("from Producto").list() ;
+		System.out.println(entity.toString());
 		return entity;
 	}
 	//--> Carrito functions:
@@ -179,7 +156,8 @@ public class IvalDAO implements InterfaceDAO {
 	 */
 	@Override
 	public List<Carrito> findAllCarritos() {
-		 List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
+		 @SuppressWarnings("unchecked")
+		List<Carrito> entity = (List<Carrito>) getCurrentSession().createQuery("from Carrito").list() ;
 		return entity;
 	}
 //	//--> Contiene functions:
