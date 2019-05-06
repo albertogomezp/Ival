@@ -26,7 +26,7 @@ public class IvalDAO implements InterfaceDAO {
 
 
 	public Session openCurrentSession() {
-		System.out.println("oks");
+		System.out.println("Abre sesion");
 		currentSession = getSessionFactory().openSession();
 		return currentSession;
 	}
@@ -50,13 +50,9 @@ public class IvalDAO implements InterfaceDAO {
 		Configuration configuration = new Configuration()
 			 .configure()
 			 .addPackage("com.testing.model")
-//			 .addPackage("com.testing.controller")
 			 .addAnnotatedClass(SecureLogin.class)
 			 .addAnnotatedClass(Carrito.class)
 			 .addAnnotatedClass(Producto.class);
-//			 .addAnnotatedClass(SecureLogin.class)
-//			 .addAnnotatedClass(Contiene.class)
-//			 .addAnnotatedClass(Core.class)	;
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
  		return sessionFactory;
@@ -170,7 +166,9 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public void signin(SecureLogin entity) {
-			getCurrentSession().save(entity);
+			currentSession.beginTransaction();
+			currentSession.save(entity);
+			currentSession.getTransaction().commit();
 		}
 
 		/* (non-Javadoc)
@@ -178,7 +176,10 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public void updateUser(SecureLogin entity) {
+			currentSession.beginTransaction();
 			getCurrentSession().update(entity);
+			currentSession.getTransaction().commit();
+
 		}
 
 		/* (non-Javadoc)
@@ -186,7 +187,9 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public SecureLogin login(String username) {
+			currentSession.beginTransaction();
 			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(username));
+			currentSession.getTransaction().commit();
 			return entity;
 		}
 

@@ -21,15 +21,15 @@
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
   </head>
-  <body class="text-center">
+  <body class="text-center bg-dark text-light">
     <form class="form-signin" action="/IvAl/Core?action=login" method="post">
   <img class="mb-4" src="img/carrito.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal" >Please log in</h1>
+  <h1 class="h3 mb-3 font-weight-norma text-lightl" >Please log in</h1>
   <label for="inputEmail" class="sr-only">Username</label>
   <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="username">
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
+  <div class="checkbox mb-3 text-light">
     <label>
       <input type="checkbox" value="remember-me"> Remember me (Not Working)
     </label>
@@ -39,7 +39,7 @@
   Error en el login <br>
   usuario y/o contraseña incorrectos
 </div>
-  <button class="btn btn-lg btn-primary btn-block"><a href="vista/signin">Sign in</a></button>
+  <button class="text-light btn btn-lg btn-primary btn-block"><a class="text-light" href="vista/signin.jsp">Sign in</a></button>
   <p class="mt-5 mb-3 text-muted">&copy; IvAl 2019</p>
 </form>
 </body>
