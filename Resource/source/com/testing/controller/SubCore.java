@@ -17,29 +17,29 @@ import com.testing.security.Passwords;
 @WebServlet("/SubCore")
 public class SubCore extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static IvalDAO ivalDAO =  new IvalDAO();
+	
 	 static List<Producto> findAll() {
+		IvalDAO ivalDAO =  new IvalDAO();
+
 		ivalDAO.openCurrentSession();
 		List<Producto> productos = ivalDAO.findAllProductos();
 		ivalDAO.closeCurrentSession();
 		return productos;
 	}
 	 
-	 /**
-	  * Check if the current login is correct
-	  * @param user - username
-	  * @param pass - password
-	  * @return true or false if login should proceed
-	  * @throws NoSuchAlgorithmException
-	  * @throws InvalidKeySpecException
-	  */
+
 	static boolean doLog(String user, String pass) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		IvalDAO ivalDAO =  new IvalDAO();
+
 		boolean response = false;
 		ivalDAO.openCurrentSession();
 		SecureLogin almacenado = ivalDAO.login(user);
 		if(almacenado !=null) {
+			//Obtiene la salt almacenada 
 			String salt = almacenado.getCondimento();
+			//Genera contraseña segura
 			String checkpass = Passwords.generateStorngPasswordHash(pass, salt);
+			//Si coincide con la almacenada, es el usuario
 			if(checkpass == almacenado.getPassword()) {
 				response = true;
 			}
@@ -54,11 +54,15 @@ public class SubCore extends HttpServlet {
 		return response;
 	}
 	
-	static void doSign(String user, String pass,String salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
+	static void doSign(SecureLogin entity) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		IvalDAO ivalDAO =  new IvalDAO();
 		ivalDAO.openCurrentSession();
-		SecureLogin entity = new SecureLogin(user, pass, salt);
+		System.out.println("dentro sesion");
 		ivalDAO.signin(entity);
+		System.out.println("en sesion");
 		ivalDAO.closeCurrentSession();
+		System.out.println("fin sesion");
+
 	}
 
 	

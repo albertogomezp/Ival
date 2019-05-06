@@ -121,6 +121,8 @@ public class IvalDAO implements InterfaceDAO {
 		return entity;
 	}
 	//--> Carrito functions:
+	
+	
 	/* (non-Javadoc)
 	 * @see com.ival.dao.InterfaceDAO#persist(com.ival.model.Carrito)
 	 */
@@ -184,7 +186,7 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public SecureLogin login(String username) {
-			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(Integer.parseInt(username)));
+			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(username));
 			return entity;
 		}
 

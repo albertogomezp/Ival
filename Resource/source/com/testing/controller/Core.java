@@ -75,19 +75,21 @@ public class Core extends HttpServlet {
 	@SuppressWarnings({ "unused", "null" })
 	private void login(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException, NoSuchAlgorithmException, InvalidKeySpecException {
+		
+		// Create login object 
 		String username = request.getParameter("username");
 		String pass = request.getParameter("password");
-		//String salt = Passwords.getSalt().toString();
-		//String password = Passwords.generateStorngPasswordHash(pass, salt);
 		SecureLogin log = new SecureLogin(username,pass);
-		boolean Log = SubCore.doLog(username,pass);
-		if(Log) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/userArea.jsp"); // ??? 
+		
+		//Check if login can be done
+		boolean loguea = SubCore.doLog(username,pass);
+		if(loguea) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp"); // ??? 
 			request.setAttribute("username", username);
 			dispatcher.forward(request, response);
 		}
 		else {
-			RequestDispatcher dispatcher = null;
+			RequestDispatcher dispatcher =  request.getRequestDispatcher("/vista/login.jsp");;
 			request.setAttribute("msg", "Error in login");
 			dispatcher.forward(request, response);
 		}
@@ -101,10 +103,12 @@ public class Core extends HttpServlet {
 		System.out.println(username+" "+pass);
 		String salt = Passwords.getSalt().toString();
 		String password = Passwords.generateStorngPasswordHash(pass, salt);
-		
-		SecureLogin log = new SecureLogin(username,pass);
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp"); // ??? 
+		SecureLogin sign = new SecureLogin(username,password,salt);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/login.jsp"); // ??? 
+
+		System.out.println(sign.toString());
+		SubCore.doSign(sign);
+		request.setAttribute("popup", 1); // If user created successfullys
 		request.setAttribute("username", username);
 		dispatcher.forward(request, response);
 		

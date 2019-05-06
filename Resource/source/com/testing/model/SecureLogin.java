@@ -54,6 +54,10 @@ public class SecureLogin {
 	public void setCondimento(String condimento) {
 		this.condimento = condimento;
 	}
+	@Override
+	public String toString() {
+		return "SecureLogin [user=" + user + ", password=" + password + ", condimento=" + condimento + "]";
+	}
 	
 	
 	
