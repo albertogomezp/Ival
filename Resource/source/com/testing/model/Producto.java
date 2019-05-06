@@ -27,23 +27,23 @@ public class Producto  {
 	private float PrePro;
 	@Column(name = "StockPro")
 	private Integer StockPro;
-	@ManyToOne
-	private Integer CodUni;
-	
-	private String Unidad;
+//	@ManyToOne
+//	private Integer CodUni;
+//	
+//	private String Unidad;
 	
 	public Producto() {
 		super();
 	}
-	public Producto(Integer codPro, String nomPro, String descPro, float prePro, Integer stockPro, Integer CodUni, String Unidad) {
+	public Producto(Integer codPro, String nomPro, String descPro, float prePro, Integer stockPro) {
 		super();
 		CodPro = codPro;
 		NomPro = nomPro;
 		DescPro = descPro;
 		PrePro = prePro;
 		StockPro = stockPro;
-		this.CodUni = CodUni;
-		this.Unidad = Unidad;
+//		this.CodUni = CodUni;
+//		this.Unidad = Unidad;
 	}
 	@Override
 	public String toString() {
@@ -80,18 +80,18 @@ public class Producto  {
 	public void setStockPro(Integer stockPro) {
 		StockPro = stockPro;
 	}
-	public Integer getCodUni() {
-		return CodUni;
-	}
-	public void setCodUni(Integer codUni) {
-		CodUni = codUni;
-	}
-	public String getUnidad() {
-		return Unidad;
-	}
-	public void setUnidad(String unidad) {
-		Unidad = unidad;
-	}
+//	public Integer getCodUni() {
+//		return CodUni;
+//	}
+//	public void setCodUni(Integer codUni) {
+//		CodUni = codUni;
+//	}
+//	public String getUnidad() {
+//		return Unidad;
+//	}
+//	public void setUnidad(String unidad) {
+//		Unidad = unidad;
+//	}
 	
 	
 	
