@@ -13,7 +13,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
 
     <!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 
 
@@ -21,9 +22,9 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-    <form class="form-signin" action="/IvAl/Core?action=signup" method="post">
+    <form class="form-signin" action="/IvAl/Core?action=login" method="post">
   <img class="mb-4" src="img/carrito.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal" >Please sign in</h1>
+  <h1 class="h3 mb-3 font-weight-normal" >Please log in</h1>
   <label for="inputEmail" class="sr-only">Username</label>
   <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="username">
   <label for="inputPassword" class="sr-only">Password</label>
@@ -33,7 +34,12 @@
       <input type="checkbox" value="remember-me"> Remember me (Not Working)
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-block " type="submit">Log in</button>
+  <div class="alert alert-danger collapse m-3" role="alert">
+  Error en el login <br>
+  usuario y/o contraseña incorrectos
+</div>
+  <button class="btn btn-lg btn-primary btn-block"><a href="vista/signin">Sign in</a></button>
   <p class="mt-5 mb-3 text-muted">&copy; IvAl 2019</p>
 </form>
 </body>
