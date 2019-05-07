@@ -36,10 +36,9 @@
 
 </head>
 
-<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+<body onload="getResponse('${msg}','${username}'); setInterval('updateClock()', 1000 )">
 
 	<!--BARRA DE NAVEGACION-->
-
 
 
 	<div class="container-fluid">

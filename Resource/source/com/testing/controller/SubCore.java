@@ -82,19 +82,21 @@ public class SubCore extends HttpServlet {
 				SecureLogin almacenado = ivalDAO.login(username);
 				
 				System.out.println(almacenado.toString());
-				if(almacenado !=null) {
+				if(almacenado.getUser() !="default") {
 					System.out.println("Almacenado no es null");
 					//-- > gets salt
 					String salt = almacenado.getCondimento();
 					//--> Generates strong password
 					String checkpass = Passwords.generateStorngPasswordHash(pass, salt);
-					System.out.println("Stored: "+almacenado.getPassword()+"  ");
-					System.out.println("Latest: "+checkpass);
-					if(checkpass == almacenado.getPassword()) {
+					System.out.println("Stored: '"+almacenado.getPassword()+"'");
+					System.out.println("Latest: '"+checkpass+"'");
+					if(checkpass.equals(almacenado.getPassword())) {
 						canLog = true;
+						System.out.println("cambia a true");
 					}
 					else {
 						canLog = false;
+						System.out.println("cambia a false");
 					}
 				}
 				else {
@@ -107,6 +109,7 @@ public class SubCore extends HttpServlet {
 				System.out.println("go index");
 
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp"); // ??? 
+				request.setAttribute("msg", "Successfully loged in");
 				request.setAttribute("username", username);
 				dispatcher.forward(request, response);
 			}

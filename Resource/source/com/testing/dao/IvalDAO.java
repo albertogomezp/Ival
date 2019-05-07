@@ -188,9 +188,20 @@ public class IvalDAO implements InterfaceDAO {
 		@Override
 		public SecureLogin login(String username) {
 			currentSession.beginTransaction();
-			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(username));
-			currentSession.getTransaction().commit();
-			return entity;
+			
+			Object entity;
+			try {
+				entity = currentSession.get(SecureLogin.class, username);
+				System.out.println(entity.toString());
+			} catch (NullPointerException e) {
+				e.printStackTrace();
+				entity = new SecureLogin();
+			}
+			System.out.println("--> Peta aqui (?)");
+			//SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(username));
+		
+			//currentSession.close();
+			return (SecureLogin) entity;
 		}
 
 		/* (non-Javadoc)

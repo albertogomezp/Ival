@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class SecureLogin {
 	@Id
 	@Column(name = "user")
-	private String user;
+	private String user = "default";
 	@Column(name="password")
 	private String password;
 	@Column(name="condimento")

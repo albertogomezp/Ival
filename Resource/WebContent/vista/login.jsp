@@ -3,6 +3,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script> 
+<%@include file="../js/scripts.js" %>
+</script>
+<style> 
+<%@include file="../css/style.css" %>
+ </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,14 +21,15 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 
 
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
   </head>
-  <body class="text-center bg-dark text-light">
+  <body class="text-center bg-dark text-light"  onload="getResponseNoUser('${msg}')">
+  
     <form class="form-signin" action="/IvAl/Core?action=login" method="post">
   <img class="mb-4" src="img/carrito.png" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-norma text-lightl" >Please log in</h1>
@@ -39,7 +47,7 @@
   Error en el login <br>
   usuario y/o contraseña incorrectos
 </div>
-  <button class="text-light btn btn-lg btn-primary btn-block"><a class="text-light" href="vista/signin.jsp">Sign in</a></button>
+  <button class="text-light btn btn-lg btn-primary btn-block"><a class="text-light" href="signin.jsp">Sign in</a></button>
   <p class="mt-5 mb-3 text-muted">&copy; IvAl 2019</p>
 </form>
 </body>
