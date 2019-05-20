@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"   pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -45,7 +45,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#alimentacion">Alimentaciï¿½n</a>
+            <a class="nav-link" href="#alimentacion">Alimentación</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#perfumeria">Perfumeria</a>
@@ -58,7 +58,7 @@
           </li>
           
         </ul>
-        <a class="btn btn-info" href="vista/login.jsp" role="button">Sign-In</a>&nbsp;
+        <a class="btn btn-info" href="vista/login.jsp" role="button">Log-In</a>&nbsp;
         <button type="button" class="btn btn-success" onclick="callJqueryAjax('test')">	Servlet	</button>  &nbsp;  <!-- Button trigger modal -->
         <ul class="nav navbar-nav navbar-right">
           <li><a data-toggle="modal" data-target="#loginModal"><span class="btn btn-outline-primary"> Carrito </span> </a></li>

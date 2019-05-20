@@ -26,7 +26,7 @@ public class IvalDAO implements InterfaceDAO {
 
 
 	public Session openCurrentSession() {
-		System.out.println("oks");
+		System.out.println("Abre sesion");
 		currentSession = getSessionFactory().openSession();
 		return currentSession;
 	}
@@ -50,13 +50,9 @@ public class IvalDAO implements InterfaceDAO {
 		Configuration configuration = new Configuration()
 			 .configure()
 			 .addPackage("com.testing.model")
-//			 .addPackage("com.testing.controller")
 			 .addAnnotatedClass(SecureLogin.class)
 			 .addAnnotatedClass(Carrito.class)
 			 .addAnnotatedClass(Producto.class);
-//			 .addAnnotatedClass(SecureLogin.class)
-//			 .addAnnotatedClass(Contiene.class)
-//			 .addAnnotatedClass(Core.class)	;
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
  		return sessionFactory;
@@ -121,6 +117,8 @@ public class IvalDAO implements InterfaceDAO {
 		return entity;
 	}
 	//--> Carrito functions:
+	
+	
 	/* (non-Javadoc)
 	 * @see com.ival.dao.InterfaceDAO#persist(com.ival.model.Carrito)
 	 */
@@ -168,7 +166,9 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public void signin(SecureLogin entity) {
-			getCurrentSession().save(entity);
+			currentSession.beginTransaction();
+			currentSession.save(entity);
+			currentSession.getTransaction().commit();
 		}
 
 		/* (non-Javadoc)
@@ -176,7 +176,10 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public void updateUser(SecureLogin entity) {
+			currentSession.beginTransaction();
 			getCurrentSession().update(entity);
+			currentSession.getTransaction().commit();
+
 		}
 
 		/* (non-Javadoc)
@@ -184,8 +187,21 @@ public class IvalDAO implements InterfaceDAO {
 		 */
 		@Override
 		public SecureLogin login(String username) {
-			SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(Integer.parseInt(username)));
-			return entity;
+			currentSession.beginTransaction();
+			
+			Object entity;
+			try {
+				entity = currentSession.get(SecureLogin.class, username);
+				System.out.println(entity.toString());
+			} catch (NullPointerException e) {
+				e.printStackTrace();
+				entity = new SecureLogin();
+			}
+			System.out.println("--> Peta aqui (?)");
+			//SecureLogin entity = (SecureLogin) getCurrentSession().get(SecureLogin.class,(username));
+		
+			//currentSession.close();
+			return (SecureLogin) entity;
 		}
 
 		/* (non-Javadoc)

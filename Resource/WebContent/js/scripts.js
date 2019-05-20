@@ -1,35 +1,21 @@
-/**
- * 
- */ 
-function updateClock ( ) // A simple clock for the web.
-{
-  var currentTime = new Date ( );
-
-  var currentHours = currentTime.getHours ( );
-  var currentMinutes = currentTime.getMinutes ( );
-  var currentSeconds = currentTime.getSeconds ( );
-
-  // Pad the minutes and seconds with leading zeros, if required
-  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-
-  // Choose either "AM" or "PM" as appropriate
-  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-
-  // Convert the hours component to 12-hour format if needed
-  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-
-  // Convert an hours component of "0" to "12"
-  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-
-  // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-  // Update the time display
-  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-}
-
-
+function getResponse(msg,username){
+	if(msg!='undefined'){
+		
+		if(username!="undefined"){
+			alert(msg+" welcome "+username);
+		}
+		else{
+			alert(msg);
+		}
+	}
+	
+};
+function getResponseNoUser(msg){
+	if(msg!='undefined'){
+		alert(msg);
+	}
+	
+};
 function callJqueryAjax(action){
 	  //var action = $('#name').val();
 	  $.ajax(
@@ -44,6 +30,20 @@ function callJqueryAjax(action){
 	    }
 	    );
 	  };
+	  function callJqueryAjaxLogin(action, user,password){
+		  //var action = $('#name').val();
+		  $.ajax(
+		    {
+		      url     : '/IvAl/Core',
+		      method     : 'POST',
+		      data     : {action: action, "username" : user, "password":password},
+		      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("ok") },
+		      error : function(jqXHR, exception){
+		        console.log('Error occured!!');
+		      }
+		    }
+		    );
+		  };	  
   function testcon(){
 	  //var action = $('#name').val();
 	  //var action = "test";

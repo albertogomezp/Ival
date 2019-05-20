@@ -3,6 +3,7 @@ package com.testing.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -26,6 +27,10 @@ public class Producto  {
 	private float PrePro;
 	@Column(name = "StockPro")
 	private Integer StockPro;
+//	@ManyToOne
+//	private Integer CodUni;
+//	
+//	private String Unidad;
 	
 	public Producto() {
 		super();
@@ -37,6 +42,8 @@ public class Producto  {
 		DescPro = descPro;
 		PrePro = prePro;
 		StockPro = stockPro;
+//		this.CodUni = CodUni;
+//		this.Unidad = Unidad;
 	}
 	@Override
 	public String toString() {
@@ -73,6 +80,19 @@ public class Producto  {
 	public void setStockPro(Integer stockPro) {
 		StockPro = stockPro;
 	}
+//	public Integer getCodUni() {
+//		return CodUni;
+//	}
+//	public void setCodUni(Integer codUni) {
+//		CodUni = codUni;
+//	}
+//	public String getUnidad() {
+//		return Unidad;
+//	}
+//	public void setUnidad(String unidad) {
+//		Unidad = unidad;
+//	}
+	
 	
 	
 	
