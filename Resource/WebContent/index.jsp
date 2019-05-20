@@ -41,10 +41,10 @@
 	<!--BARRA DE NAVEGACION-->
 
 
-	<div class="container-fluid">
+	
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<a class="navbar-brand" href="#"> <img
-				src="vista/img/carrito.png" width="60" alt="">
+				src="vista/img/ico.png" width="60" alt="">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -101,19 +101,13 @@
 	<!--FIN NAV -->
 
 
-	<div class="container">
+<div id="contenedor" style="width:100%; height:100%;">
 		<section id="carousel">
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
+
 			<!-- Carrousel -->
 			<div id="carouselExampleIndicators" class="carousel slide"
 				data-ride="carousel">
+				<hr><hr>
 
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -144,8 +138,7 @@
 		<!-- Section alimentacion -->
 		<section id="alimentacion">
 
-			<div
-				class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+			<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 
 				<h1 class="display-4">Alimentación</h1>
 				<p class="lead">Desde nuestra tienda puedes comprar los
@@ -492,8 +485,7 @@
 		<footer class="pt-4 my-md-5 pt-md-5 border-top">
 			<div class="row">
 				<div class="col-12 col-md">
-					<img src="vista/img/carrito.png" alt="carro" width="24" height="24">
-					<small class="d-block mb-3 text-muted">&copy; 2019</small>
+					<!-- Queda mejor ese espacio  -->
 				</div>
 				<div class="col-6 col-md">
 					<h5>Creadores</h5>
