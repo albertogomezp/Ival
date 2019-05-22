@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header" />
+	<div class="container py-5 ">
+		<div class="card bg-dark text-light text-center mt-3">
+			<div class="card-header text-center" th:text="${titulo}"></div>
+							<img th:if="${#strings.length(producto.foto)>0}" class="d-inline img-fluid img-thumbnail rounded mx-auto d-block mt-3 " style="max-width: 25%;" th:src="@{'/uploads/'+${producto.foto}}" >
+			
+			<div class="card-body">
+				<ul class="list-group">
+					<li class="list-group-item text-dark" th:text="${producto.nombre}"></li>
+					<li class="list-group-item text-dark" th:text="${producto.descripcion}"></li>
+					<li class="list-group-item text-dark" th:text="${producto.precio}"><small class="list-group-item text-dark" th:text="${producto.unidad}"> </small></li>
+					<li class="list-group-item text-dark" th:text="${producto.stock}"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="layout/layout :: footer" />
+</body>
+</html>

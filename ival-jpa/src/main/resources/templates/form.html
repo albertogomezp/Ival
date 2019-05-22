@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header" />
+	<div class="container py-5">
+		<div class="card bg-dark text-light">
+			<div class="card-header" th:text="${titulo}"></div>
+			<div class="card-body">
+				<div th:object="${producto}" th:remove="tag">
+					<ul th:if="${#fields.hasErrors('*')}"
+						class="alert alert-danger text-center list-unstyled">
+						<li th:each="err: ${#fields.errors('*')}" th:text="${err}"></li>
+					</ul>
+				</div>
+				<form th:action="@{/form}" th:object="${producto}" method="post"
+					enctype="multipart/form-data" class="text-center">
+					<div class="form-group row text-center">
+						<label class="col-sm-2 col-form-label">Nombre</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{nombre}" class="form-control"
+								th:errorclass="'form-control alert-danger'" /> <small
+								class="form-text text-danger"
+								th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Descripcion</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{descripcion}" class="form-control"
+								th:errorclass="'form-control alert-danger'" /> <small
+								class="form-text text-danger"
+								th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></small>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Precio</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{precio}" class="form-control"
+								th:errorclass="'form-control alert-danger'" /> <small
+								class="form-text text-danger"
+								th:if="${#fields.hasErrors('precio')}" th:errors="*{precio}"></small>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Unidad</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{unidad}" class="form-control"
+								th:errorclass="'form-control alert-danger'" /> <small
+								class="form-text text-danger"
+								th:if="${#fields.hasErrors('unidad')}" th:errors="*{unidad}"></small>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Stock</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{stock}" class="form-control"
+								th:errorclass="'form-control alert-danger'" /> <small
+								class="form-text text-danger"
+								th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></small>
+						</div>
+					</div>
+					<div class="form-group row"> 
+
+					<label for="file" class="col-sm-2 col-form-label"></label>
+						<div class="col-sm-6">
+							<input type="file" name="file" class="form-control"/>
+						</div>					
+					</div>					
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<input type="submit" class="btn btn-xs"	th:class="${whatis}?  'btn btn-danger' :  'btn btn-success'" th:value="${accion}" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="layout/layout :: footer" />
+</body>
+</html>

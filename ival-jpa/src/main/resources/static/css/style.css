@@ -1,0 +1,83 @@
+@charset "ISO-8859-1";
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	      html {
+	  font-size: 14px;
+	}
+	@media (min-width: 768px) {
+	  html {
+	    font-size: 16px;
+	  }
+	}
+	
+	.container {
+	  max-width: 960px;
+	}
+	
+	.pricing-header {
+	  max-width: 700px;
+	}
+	
+	.card-deck .card {
+	  min-width: 220px;
+	}
+	
+	.strikethrough {
+    position: relative;
+}
+ 
+
+
+.tachar{
+	color:pink;
+text-decoration:line-through;
+}
+
+#mismalinea h1 { display:inline; }
+
+body{
+	
+	background-color: rgb(234,237,237);
+}
+
+    .zoom{
+
+        /* Aumentamos la anchura y altura durante 2 segundos */
+
+        transition: width 2s, height 2s, transform 2s;
+
+        -moz-transition: width 2s, height 2s, -moz-transform 2s;
+
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+
+        -o-transition: width 2s, height 2s,-o-transform 2s;
+
+    }
+
+    .zoom:hover{
+
+        /* tranformamos el elemento al pasar el mouse por encima al doble de
+
+           su tama�o con scale(2). */
+
+        transform : scale(2);
+
+        -moz-transform : scale(2);      /* Firefox */
+
+        -webkit-transform : scale(2);   /* Chrome - Safari */
+
+        -o-transform : scale(2);        /* Opera */
+
+    }

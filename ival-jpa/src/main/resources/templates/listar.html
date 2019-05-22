@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head">
+</head>
+<body>
+    <header th:replace="layout/layout :: header" ></header>
+    <section th:replace="layout/layout :: carrousel" ></section>
+    <div class="container-fluid text-center " th:class="${whatis}?  'py-0' :  'py-5'">
+        
+
+
+            <div class="card-body text-center">
+                <div class="container fluid">
+                
+	                <div class="row container-fluid">
+	                    <div class="card mb-3 shadow-sm col-md-4 px-1" th:each="producto: ${productos}">
+	                        <div class="card-header">
+	                            <h4 class="my-0 font-weight-normal" th:text="${producto.nombre}"></h4>
+	                        </div>
+	                        <div class="card-body">
+	                            <img  class="d-inline img-squared img-fluid zoom "  th:src="@{'/img/'+${producto.id}+'.png'}" >
+	                            <div class="d-inline">
+	                             <h1 class="d-inline card-title pricing-card-title" th:text="${producto.precio}"> </h1>
+	                                <h2 class="d-inline text-muted " th:text="${producto.unidad}"></h2>
+	                           
+	                            </div>
+	                           <div class="m-auto">
+		                           <button type="button"class="btn btn-lg btn-block btn-outline-primary mb-1">Añadir al carrito</button>
+		                            <a class="btn btn-primary btn-xs" th:href="@{/ver/} + ${producto.id}" th:text="'ver'"></a>
+		                            <a class="btn btn-info btn-xs" th:href="@{/form/} + ${producto.id}" th:text="'editar'"></a>
+		                            <a class="btn btn-danger btn-xs" th:href="@{/eliminar/} + ${producto.id}" th:text="'eliminar'" onclick="return confirm('Estï¿½s seguro que quieres eliminar?');"></a>
+	                           </div>
+	                            
+	                        </div>
+	                       
+	                    </div>
+	                </div>
+	                
+	                
+	                <nav class="t ext-center" th:replace="paginator-nav :: paginator"></nav>
+                </div>
+            </div>
+        
+    </div>
+     
+    <footer th:replace="layout/layout :: footer" ></footer>
+     <alert th:replace="layout/layout :: alert" ></alert>
+</body>
+</html>

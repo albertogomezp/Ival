@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/layout :: head">
+
+<body>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="page-wrap d-flex flex-row align-items-center mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1 d-block">404</span>
+                <div class="mb-4 lead">la página que has buscado no se encuentra disponible<br> <small> o si pero algo va mal...</small></div>
+                <a href="https://www.totoprayogo.com/#" class="btn btn-link" th:href="@{/}">volver al inicio</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed-bottom">
+ <footer  th:replace="layout/layout :: footer" ></footer>
+</div>
+   
+</body>
+</html>
